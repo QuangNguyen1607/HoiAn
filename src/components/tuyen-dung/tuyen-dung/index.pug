@@ -1,0 +1,52 @@
+.section.main-section.page-recruit.bg-primary
+    .container
+        .swiper-recruit
+            .swiper-container
+                .swiper-wrapper
+                    -for(i=0;i<4;i++)
+                        .swiper-slide
+                            .wrap-box
+                                .wrap-content
+                                    .box-content
+                                        .wrap-title-main
+                                            .main-title Môi trường làm việc
+                                            .desc-title Nằm ở phía Tây của tỉnh Hòa Bình, giáp với huyện Mộc Châu của Sơn La
+                                        .content Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                                        a(href="").seemore.home-6
+                                            span Xem tiếp
+                                            .wrap-button
+                                                .button-prev-2
+                                                    em.lnr.lnr-chevron-left
+                                                .button-next-2
+                                                    em.lnr.lnr-chevron-right
+                                .wrap-img
+                                    .img.zoom-img
+                                        img.lazyload(data-src="./img/tuyen-dung/3.png", alt="")
+
+.section.main-section.page-recruit-2
+    .container
+        .wrap-title-main
+            .main-title Môi trường làm việc
+            .desc-title Nằm ở phía Tây của tỉnh Hòa Bình, giáp với huyện Mộc Châu của Sơn La
+        .row
+            -for(i=0;i<6;i++)
+                .col-md-6.col-sm-12
+                    .wrap-related
+                        a(href="").related-item
+                            .title Nhân viên bảo vệ
+                            .address-time
+                                .address
+                                    em.material-icons location_on
+                                    span Tp. Hồ Chí Minh
+                                .time
+                                    em.material-icons event_available
+                                    span 10.01.2021
+                            .price
+                                em.material-icons attach_money
+                                span 8 - 10 triệu VNĐ
+                                .arrow
+                                    em.lnr.lnr-arrow-right
+        a.button-readmore(href="") 
+            span Xem thêm
+            em.material-icons arrow_drop_down
+                        

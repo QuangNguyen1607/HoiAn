@@ -1,0 +1,24 @@
+section.home-3.slide-product-main
+	.container
+		.wrap-title-main
+			.main-title Tour du lịch
+			.desc-title Khám phá ngay!
+		.wrap-slide
+			.swiper-container
+				.swiper-wrapper
+					-for(i=0;i<5;i++)
+						.swiper-slide
+							.box-product-slide
+								.img
+									a(href="")
+										img(data-src="./img/home/h3-1.png" alt="" class="lazyload")
+								.box-desc
+									.wrap-text
+										a(href="").title-p Hà Nội - Mai Châu Hideaway - Mộc Châu
+										.date-p 3 ngày 2 đêm
+									a(href="").button-readmore Đặt ngay
+			.wrap-button
+				.button-prev.button-sw-1
+					em.lnr.lnr-arrow-left
+				.button-next.button-sw-1
+					em.lnr.lnr-arrow-right

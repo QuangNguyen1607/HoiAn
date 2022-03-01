@@ -1,0 +1,46 @@
+.section-post-list
+	background-attachment: fixed
+	.wrap-title-header
+		display: flex
+		align-items: flex-end
+		justify-content: space-between
+		margin-bottom: 27px
+		@media screen and ( max-width: 575.89px )
+			flex-direction: column
+			align-items: baseline
+		.wrap-title-main
+			margin-bottom: 0
+		.button-readmore
+			margin-bottom: 9px
+			@media screen and ( max-width: 575.89px )
+				margin-top: 15px
+	.wrap-post-list
+		.box-tin
+			margin-bottom: 30px
+			.img
+				a
+					+img-scale(260/390)
+			.wrap-content
+				background-color: rgba(0, 0, 0, 0.25)
+				padding: 20px
+				.title
+					color: #ffffff
+					font-size: r(18px)
+					font-weight: 400
+					transition: .3s all ease-in-out
+					line-height: 1.3
+					display: block
+					margin-bottom: 15px
+					+rgtext(3)
+					height: 69px
+					transition: .2s ease-in-out all
+					&:hover
+						color: color(cream)
+				.date
+					color: color(cream)
+					font-size: r(12px)
+					font-weight: 400
+					letter-spacing: 1.2px
+	@media(min-width: 1440px)
+		padding-top: r(78px)
+		padding-bottom: r(78px)

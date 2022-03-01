@@ -1,0 +1,39 @@
+.restaurant-utilities_page
+	.global-breadcrumb
+		background-color: color(cream)
+.page-restaurant-utilities
+	&.main-section
+		padding: r(60px) 0
+		@media screen and ( max-width: 1023.67px )
+			padding-bottom: 0
+	.item
+		position: relative
+		.img
+			+img-scale(400/600)
+		.inner-title
+			display: block
+			position: absolute
+			bottom: 0
+			padding: r(15px) r(30px)
+			left: 0
+			width: calc(100%-60px)
+			background: rgba(white,.95)
+			font-size: 1.4rem
+			color: color(main-text)
+			transition: .3s all ease-in-out
+			@media screen and ( max-width: 1023.9px )
+				width: 100%
+				position: static
+			&:hover
+				color: color(main)
+	.item-content
+		font-size: r(14px)
+		color: #333333
+		width: calc(100%-60px)
+		padding: r(5px) r(30px) r(30px)
+		line-height: r(24px)
+		background-color: white
+		@media screen and ( max-width: 1023.9px )
+			width: 100%
+			margin-bottom: 40px
+

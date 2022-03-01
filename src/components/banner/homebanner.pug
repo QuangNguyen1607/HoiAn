@@ -1,0 +1,23 @@
+section.banner-home#home-banner
+	.swiper-container.slide-home
+		.swiper-wrapper
+			- for(var i = 0; i < 4; ++i)
+				.swiper-slide
+					.box-banner
+						.img
+							img(src="./img/home-banner.png" alt="")
+						.box-text
+							.title-small Mai Châu Hideaway Resort
+							.title-big Thiên đường xanh giữa
+								br
+								| lòng hồ Hòa Bình
+							a(href="").button-readmore Xem Tour
+	.form-search
+		.container
+			.wrap-form
+				.form-group.date-input
+					input(type="text" placeholder="Ngày nhận phòng")
+				.form-group.date-input
+					input(type="text" placeholder="Ngày trả phòng")
+				.frm-btnwrap
+					input(type="submit" value="Đặt ngay")

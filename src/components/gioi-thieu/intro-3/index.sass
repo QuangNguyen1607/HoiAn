@@ -1,0 +1,68 @@
+.intro-3
+	&#tab-3
+		@media screen and ( max-width: 1279.89px )
+			.box-left
+				order: 2
+				margin-top: 30px
+			.box-right
+				order: 1
+	&#tab-4
+		@media screen and ( max-width: 1279.89px )
+			.box-left
+				margin-top: 30px
+	.desc-title
+		p
+			+rgtext(2)
+	.wrap-slide
+		display: flex
+		flex-wrap: wrap
+		.box-left
+			flex: 0 0 50%
+			max-width: 50%
+			@media screen and ( max-width: 1279.89px )
+				flex: 0 0 100%
+				max-width: 100%
+		.box-right
+			flex: 0 0 50%
+			max-width: 50%
+			@media screen and ( max-width: 1279.89px )
+				flex: 0 0 100%
+				max-width: 100%
+			.wrap-img
+				height: 100%
+				width: 100%
+				*
+					height: 100%
+					width: 100%
+				img
+					object-fit: cover
+	&.main-section
+		padding-top: 0
+		@media screen and ( max-width: 1279.9px )
+			padding-bottom: r(30px)
+	&.pt-80
+		padding-top: r(80px)
+	@media screen and ( max-width: 1279.89px )
+		&:nth-child(even)
+			.wrap-box
+				display: flex
+				flex-direction: column-reverse
+	@media screen and ( min-width: 1280px )
+		.box-content
+			padding-right: 0
+			padding-left: r(75px)
+	@media screen and ( max-width: 1279.9px )
+		padding-left: 0
+	@media screen and ( max-width: 1279.9px)
+		.wrap-img
+			margin-bottom: r(30px)
+	@media screen and ( max-width: 575.89px )
+		.wrap-button
+			margin-bottom: 0
+		.wrap-content
+			margin-bottom: r(30px)
+	.wrap-button
+		margin-bottom: 0!important
+	.wrap-title-main
+		@media screen and ( max-width: 1279.89px  )
+			margin-bottom: 0px

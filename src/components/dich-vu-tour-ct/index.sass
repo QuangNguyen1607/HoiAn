@@ -1,0 +1,70 @@
+.section-map-main
+	background-position: bottom!important
+	.map-main
+		box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.2)
+		height: 610px
+		@media screen and ( max-width: 1279.89px )
+			height: 40vh
+		iframe
+			width: 100%
+			height: 100%
+		a
+			+img-scale(610/1230)
+.page-uu-dai-product
+	&.dich-vu-tour-ct-1
+		.table-price
+			height: 94px
+			overflow: auto
+			border-bottom: 0px!important
+			padding-right: 25px
+			color: #666666!important
+			padding-top: 0!important
+			font-size: r(14px)!important
+			font-weight: 400
+			line-height: 22px
+			@media screen and ( max-width: 767.89px )
+				height: 180px
+			&::-webkit-scrollbar
+				width: 3px
+			&::-webkit-scrollbar-track
+				background-color: rgba( #666666,0.2 )
+			&::-webkit-scrollbar-thumb
+				background: color(main)
+			&::-webkit-scrollbar-thumb:hover
+				background: color(main)
+		.wrap-box-flex
+			.box-left
+				flex: 0 0 57.31%
+				max-width: 57.31%
+				min-height: 470px
+				height: auto
+				@media screen and ( max-width: 1279.89px )
+					flex: 0 0 50%
+					max-width: 50%
+				@media screen and ( max-width: 1023.67px )
+					flex: 0 0 100%
+					max-width: 100%
+					height: auto
+			.box-content
+				flex: 0 0 42.69%
+				max-width: 42.69%
+				min-height: 470px
+				height: auto
+				padding-top: 35px
+				padding-left: 58px
+				padding-bottom: 35px
+				.table-price
+					padding-bottom: 1px
+					td
+						padding-bottom: 14px
+				.title-product
+					margin-bottom: 19px
+				@media screen and ( max-width: 1279.89px )
+					flex: 0 0 50%
+					max-width: 50%
+					padding-left: 25px
+				@media screen and ( max-width: 1023.67px )
+					flex: 0 0 100%
+					max-width: 100%
+					height: auto
+

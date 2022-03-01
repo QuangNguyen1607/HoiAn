@@ -1,0 +1,229 @@
+.btn-book
+	width: 130px
+	height: 40px
+	display: flex
+	align-items: center
+	justify-content: center
+	color: color(main-text)
+	font-size: r(14px)
+	font-weight: 700
+	background-image: linear-gradient(90deg,#f9af3e 0%,#fbec76 33%,#fdca56 67%,#fbeb75 100%)
+	background-size: 200% 100%
+	transition: .4s ease-in-out all
+	border-radius: 20px
+	&:hover 
+		background-position: 100% 0
+	@media screen and ( max-width: 767.89px )
+		position: fixed
+		bottom: -100%
+		left: 0
+		width: 100%
+		margin-left: 0!important
+		transition: .3s all ease-in-out
+		&::before
+			content: ''
+			animation: 3s BorderBox infinite
+			background-image: linear-gradient(145deg,#d6b058,#dcbb65 40%,#e5c474 70%,#c3a35a)
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			background-size: 300% 300%
+		&.show
+			bottom: 0
+	a
+		display: flex
+		justify-content: center
+		align-items: center
+		width: 100%
+		height: 100%
+		// +hover-underline(95%, color(main-text))
+	em
+		color: color(main-text)
+		font-size: 1rem
+		margin-right: 8px
+.button-readmore
+	height: 40px
+	border-radius: 20px
+	background-color: color(cream)
+	display: flex
+	align-items: center
+	justify-content: center
+	position: relative
+	color: color(main)
+	width: fit-content
+	padding-left: 32px
+	padding-right: 23px
+	font-size: 14px
+	font-weight: 700
+	letter-spacing: 1.4px
+	position: relative
+	overflow: hidden
+	z-index: 2
+	transition: .3s all ease-in-out
+	&::before
+		content: "\e87a"
+		font-family: "Linearicons-Free"
+		font-weight: 400
+		font-size: 20px
+		position: absolute
+		left: 0
+		transition: .2s ease
+	&:hover
+		box-shadow: 0 0 5px 1px rgba(black, .1)
+		color: color4(main)
+		background-color: color(cream)
+		&:before 
+			left: 3px
+	&.transparent
+		background-color: transparent
+		border: 1px solid white
+		color: white
+		&:hover
+			background-color: color(cream)
+.wrap-slide
+	position: relative
+.wrap-button
+	display: flex
+	align-items: center
+	justify-content: center
+	@media screen and ( max-width: 1400px )
+		margin-bottom: 25px
+		margin-top: 15px
+	@media screen and ( max-width: 575.89px )
+		margin-top: 10px
+	.button-next
+		left: 100%
+		margin-left: 39px
+		@media screen and ( max-width: 1400px )
+			margin-left: 15px
+	.button-prev
+		right: 100%
+		margin-right: 39px
+		@media screen and ( max-width: 1400px )
+			margin-right: 15px
+.button-next,.button-prev
+	position: absolute
+	top: 50%
+	transform: translateY(-50%)
+	display: flex
+	align-items: center
+	justify-content: center
+	@media screen and ( max-width: 1400px )
+		position: static
+		transform: translateY(0)
+.button-sw-1
+	width: 43px
+	height: 43px
+	top: 46%!important
+	&:hover
+		em
+			color: white
+			z-index: 2
+		&::before
+			background-color: color(main-text)
+	em
+		color: color(main-text)
+		font-size: 20px
+		transition: .3s all ease-in-out
+	&::before
+		content: ''
+		width: 43px
+		height: 43px
+		border: 1px solid color(main-text)
+		position: absolute
+		transition: .3s all ease-in-out
+		top: 50%
+		z-index: -1
+		left: 50%
+		transform: translate(-50%,-50%) rotate(45deg)
+.ui-datepicker
+	background-color: rgba(color(main),0.4 )!important
+	backdrop-filter: blur(40px)
+	margin-top: 10px
+	z-index: 99!important
+	.ui-datepicker-calendar
+		thead
+			span
+				color: color(main-text)
+	.ui-state-default
+		background-color: color(main-text)!important
+		color: white!important
+		&.ui-state-active
+			background-color: color(main)!important
+			color: white!important
+			border-color: white!important
+	.ui-datepicker-header
+		background-color: color(main-text)
+		color: white
+		border: 0
+.ui-datepicker-next
+	background-color: transparent!important
+	border: 0px !important
+	right: 2px!important
+	transition: .3s all ease-in-out
+	span
+		background-image: url(../img/icon/right2.png) !important
+		background-position: 0px 0px !important
+		width: 20px!important
+.ui-datepicker-prev
+	background-color: transparent!important
+	border: 0px !important
+	right: 2px!important
+	transition: .3s all ease-in-out
+	span
+		background-image: url(../img/icon/left2.png) !important
+		filter: brightness(0) invert(1)
+		background-position: 0px 0px !important
+		width: 20px!important
+.button-prev-in,.button-next-in
+	position: absolute
+	top: 50%
+	z-index: 99
+	transform: translateY(-50%)
+	display: flex
+	align-items: center
+	justify-content: center
+	cursor: pointer
+	outline: none
+	em
+		outline: none
+.button-prev-in
+	left: 0
+	margin-left: 29px
+.button-next-in
+	right: 0
+	margin-right: 29px
+.button-sw-white
+	width: 35px
+	height: 35px
+	&:hover
+		&::before
+			background-color: color(main)
+	&::before
+		content: ''
+		width: 35px
+		height: 35px
+		border: 1px solid color(main-text)
+		position: absolute
+		transition: .3s all ease-in-out
+		background-color: #ffffff
+		opacity: 0.8
+		top: 50%
+		z-index: -1
+		left: 50%
+		transform: translate(-50%,-50%) rotate(45deg)
+.button-menu
+	width: 60px
+	height: 30px
+	border: 1px solid #ffffff
+	display: flex
+	align-items: center
+	justify-content: center
+	color: white
+	transition: .3s all ease-in-out
+	background-color: transparent
+	&:hover
+		color: white
+		background-color: color(main-text)

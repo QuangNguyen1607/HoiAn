@@ -1,0 +1,366 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="~/App_MasterPages/layout.Master.cs"
+	Inherits="CanhCam.Web.layout" %>
+<%@ Register Src="~/Custom/FacebookChatBoxControl.ascx" TagPrefix="portal" TagName="FacebookChatBoxControl" %>
+<!DOCTYPE html>
+
+<html id="Html1" runat="server">
+
+<head id="Head1" runat="server">
+	<title></title>
+	<portal:MetaContent ID="MetaContent" runat="server" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="format-detection" content="telephone=no">
+
+	<portal:StyleSheetCombiner ID="StyleSheetCombiner" runat="server" IncludejQueryUI="false" JQueryUIThemeName="smoothness" />
+	<!-- // stylesheet -->
+	<link rel="stylesheet" href="/Data/Sites/1/skins/default/css/global.min.css">
+	<link rel="stylesheet" href="/Data/Sites/1/skins/default/css/main.min.css">
+
+	<!-- ////////////// Favicon ////////////// -->
+	<link rel="manifest" href="/Data/Sites/1/skins/default/favicon/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="/Data/Sites/1/skins/default/favicon/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+	<meta name="msapplication-navbutton-color" content="#ffffff">
+	<meta name="apple-mobile-web-app-status-bar-style" content="#ffffff">
+	<!-- ////////////// Responsive Config ////////////// -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="msapplication-tap-highlight" content="no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<portal:Favicon ID="Favicon1" runat="server" />
+
+	<portal:ScriptLoader ID="ScriptLoader1" runat="server" />
+	<portal:GoogleAnalyticsScript ID="GoogleAnalyticsScript1" runat="server" />
+	<!-- <script type="text/javascript">
+		var onloadCallback = function () {
+			grecaptcha.render('recaptcha', {
+				'sitekey': '6Ld5tZAaAAAAAK8vnAAEANjXoNutANNVgdqQrr4X'
+			});
+		};
+	</script> -->
+</head>
+
+<body id="Body" runat="server" class="canhcam">
+	<portal:FacebookSdk ID="fbsdk" runat="server" />
+	<portal:LayoutDisplaySettings ID="LayoutDisplaySettings1" runat="server" />
+	<form id="frmMain" runat="server">
+		<asp:SiteMapDataSource ID="SiteMapData" runat="server" ShowStartingNode="false" />
+		<asp:SiteMapDataSource ID="PageMapDataSource" runat="server" ShowStartingNode="false" />
+		<asp:SiteMapDataSource ID="ChildPageSiteMapData" runat="server" ShowStartingNode="false" />
+		<asp:ScriptManager ID="ScriptManager1" EnableCdn="true" EnablePageMethods="false" LoadScriptsBeforeUI="false"
+			ScriptMode="Release" CompositeScript-ScriptMode="Release" runat="server" />
+		<div id="wrapper">
+			<header>
+				<div class="top-bar">
+					<div class="container">
+						<div class="wrap-top-bar">
+							<div class="wrap-left">
+								<portal:ModuleWrapper ID="mdl206" runat="server" ConfigureModuleId="206" />
+
+							</div>
+							<div class="center"></div>
+							<div class="wrap-right">
+								<div class="list-menu">
+									<portal:ModuleWrapper ID="mdl207" runat="server" ConfigureModuleId="207" />
+									<portal:ModuleWrapper ID="mdl208" runat="server" ConfigureModuleId="208" />
+
+
+									<div class="search-box"><em class="material-icons icons">search</em><span>Tìm
+											kiếm</span></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<portal:ModuleWrapper ID="mdl209" runat="server" ConfigureModuleId="209" />
+				<div class="main-menu">
+					<div class="main-menu-mobile">
+						<ul class="wrap-other"></ul>
+					</div>
+					<div class="container">
+						<div class="wrap-main-menu">
+							<div class="wrap-left">
+								<portal:ModuleWrapper ID="mdl210" runat="server" ConfigureModuleId="210" />
+
+								<div class="hambuger"><span></span><span></span><span></span><span></span></div>
+							</div>
+							<div class="wrap-right">
+								<portal:ModuleWrapper ID="mdl211" runat="server" ConfigureModuleId="211" />
+
+								<ul class="l-search-box"></ul>
+								<portal:ModuleWrapper ID="mdl212" runat="server" ConfigureModuleId="212" />
+
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="search-wrap">
+					<div class="search-middle">
+						<div class="close-btn">X</div>
+						<portal:ModuleWrapper ID="mdl213" runat="server" ConfigureModuleId="213" />
+					</div>
+				</div>
+			</header>
+
+			<main>
+				<asp:Panel ID="divAlt1" runat="server" CssClass="altcontent1">
+					<asp:ContentPlaceHolder ID="altContent1" runat="server">
+					</asp:ContentPlaceHolder>
+				</asp:Panel>
+				<asp:Panel ID="divLeft" runat="server" CssClass="leftside" Visible="True" SkinID="pnlPlain">
+					<asp:ContentPlaceHolder ID="leftContent" runat="server">
+					</asp:ContentPlaceHolder>
+				</asp:Panel>
+				<asp:Panel ID="divCenter" runat="server" Visible="True" CssClass="center-rightandleftmargins"
+					SkinID="pnlPlain">
+					<asp:ContentPlaceHolder ID="mainContent" runat="server">
+					</asp:ContentPlaceHolder>
+				</asp:Panel>
+				<asp:Panel ID="divRight" runat="server" Visible="True" CssClass="rightside" SkinID="pnlPlain">
+					<asp:ContentPlaceHolder ID="rightContent" runat="server">
+					</asp:ContentPlaceHolder>
+				</asp:Panel>
+				<asp:Panel ID="divAltContent2" runat="server" CssClass="altcontent2">
+					<asp:ContentPlaceHolder ID="altContent2" runat="server"></asp:ContentPlaceHolder>
+				</asp:Panel>
+
+				<portal:ModuleWrapper ID="mdl265" runat="server" ConfigureModuleId="265" />
+				<portal:ModuleWrapper ID="mdl230" runat="server" ConfigureModuleId="230" />
+				<portal:modulewrapper id="mdl299" runat="server" ConfigureModuleId="299" />
+			</main>
+			<footer>
+				<div class="footer-1">
+					<portal:ModuleWrapper ID="mdl215" runat="server" ConfigureModuleId="215" />
+
+					<portal:ModuleWrapper ID="mdl214" runat="server" ConfigureModuleId="214" />
+				</div>
+				<div class="footer-2">
+					<div class="container">
+						<div class="row">
+							<div class="col-lg-4">
+								<portal:ModuleWrapper ID="mdl216" runat="server" ConfigureModuleId="216" />
+
+							</div>
+							<div class="col-lg-4">
+								<portal:ModuleWrapper ID="mdl217" runat="server" ConfigureModuleId="217" />
+
+							</div>
+							<div class="col-lg-4">
+								<portal:ModuleWrapper ID="mdl218" runat="server" ConfigureModuleId="218" />
+								<portal:ModuleWrapper ID="mdl219" runat="server" ConfigureModuleId="219" />
+								<portal:ModuleWrapper ID="mdl220" runat="server" ConfigureModuleId="220" />
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="footer-3">
+					<div class="container">
+						<div class="wrap-1">
+							<portal:ModuleWrapper ID="mdl221" runat="server" ConfigureModuleId="221" />
+
+						</div>
+						<portal:ModuleWrapper ID="mdl222" runat="server" ConfigureModuleId="222" />
+						<portal:ModuleWrapper ID="mdl223" runat="server" ConfigureModuleId="223" />
+					</div>
+				</div>
+			</footer>
+		</div>
+		<portal:AutoHidePanel ID="ah1" CssClass="cmsadminpanel" runat="server">
+			<div class="row">
+				<div class="col-lg-12">
+					<nav>
+						<ul class="nav navbar-nav listmenu type-none">
+							<portal:AdminMenuLink ID="lnkDashboard" IconCssClass="fa fa-key" RenderAsListItem="true"
+								runat="server" />
+							<portal:PageEditFeaturesLink ID="lnkPageContent" IconCssClass="fa fa-cog"
+								RenderAsListItem="true" runat="server" />
+							<portal:PageEditSettingsLink ID="lnkPageSettings" IconCssClass="fa fa-edit"
+								RenderAsListItem="true" runat="server" />
+							<portal:NewZoneLink ID="lnkNewZone" IconCssClass="fa fa-file" RenderAsListItem="true"
+								runat="server" />
+							<portal:ZoneEditSettingsLink ID="lnkZoneSettings" IconCssClass="fa fa-edit"
+								RenderAsListItem="true" runat="server" />
+							<li>
+								<asp:ContentPlaceHolder ID="pageEditContent" runat="server">
+								</asp:ContentPlaceHolder>
+							</li>
+						</ul>
+						<ul class="nav type-none">
+							<li><a href="javascript:;" id="pullmenucms"><i class="fa fa-chevron-circle-right"></i></a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+			<script type="text/javascript">
+					$(document).ready(function () {
+					$("#pullmenucms").click(function (e) {
+					e.preventDefault();
+					if ($(this).parents('.cmsadminpanel').hasClass('toggled')) {
+					ShowToolbar();
+					Set_Cookie('toolbarOpenState', 'open');
+					} else {
+					HideToolbar();
+					Set_Cookie('toolbarOpenState', 'closed');
+					}
+					});
+					var openState = Get_Cookie('toolbarOpenState');
+					if (openState != null) {
+					if (openState == 'closed') {
+					HideToolbar();
+					}
+					if (openState == 'open') {
+					ShowToolbar();
+					}
+					}
+					});
+
+					function HideToolbar() {
+					$('.cmsadminpanel').addClass("toggled");
+					$('.fa-chevron-circle-right').addClass('fa-rotate-180');
+					}
+
+					function ShowToolbar() {
+					$('.cmsadminpanel').removeClass("toggled");
+					$('.fa-chevron-circle-right').removeClass('fa-rotate-180');
+					}
+
+			</script>
+			<!-- <link rel="stylesheet" type="text/css" href="/App_Themes/toolbar.css?v=2.0.0" />
+			<script src="/App_Themes/adminskin/js/moduleactions.js?v=2.0.0"></script> -->
+		</portal:AutoHidePanel>
+		<portal:FacebookChatBoxControl runat="server" />
+		<script>
+			LazyLoad = function (doc) {
+				var env, head, pending = {},
+					pollCount = 0,
+					queue = {
+						css: [],
+						js: []
+					},
+					styleSheets = doc.styleSheets;
+
+				function createNode(name, attrs) {
+					var node = doc.createElement(name),
+						attr;
+					for (attr in attrs) attrs.hasOwnProperty(attr) && node.setAttribute(attr, attrs[attr]);
+					return node
+				}
+
+				function finish(type) {
+					var p = pending[type],
+						callback, urls;
+					p && (callback = p.callback, (urls = p.urls).shift(), pollCount = 0, urls.length || (callback &&
+						callback.call(p.context, p.obj), pending[type] = null, queue[type].length && load(
+							type)))
+				}
+
+				function getEnv() {
+					var ua = navigator.userAgent;
+					((env = {
+						async: !0 === doc.createElement("script").async
+					}).webkit = /AppleWebKit\//.test(ua)) || (env.ie = /MSIE|Trident/.test(ua)) || (env.opera =
+						/Opera/.test(ua)) || (env.gecko = /Gecko\//.test(ua)) || (env.unknown = !0)
+				}
+
+				function load(type, urls, callback, obj, context) {
+					var _finish = function () {
+							finish(type)
+						},
+						isCSS = "css" === type,
+						nodes = [],
+						i, len, node, p, pendingUrls, url;
+					if (env || getEnv(), urls)
+						if (urls = "string" == typeof urls ? [urls] : urls.concat(), isCSS || env.async || env
+							.gecko || env.opera) queue[type].push({
+							urls: urls,
+							callback: callback,
+							obj: obj,
+							context: context
+						});
+						else
+							for (i = 0, len = urls.length; i < len; ++i) queue[type].push({
+								urls: [urls[i]],
+								callback: i === len - 1 ? callback : null,
+								obj: obj,
+								context: context
+							});
+					if (!pending[type] && (p = pending[type] = queue[type].shift())) {
+						for (head || (head = doc.head || doc.getElementsByTagName("head")[0]), i = 0, len = (
+								pendingUrls = p.urls.concat()).length; i < len; ++i) url = pendingUrls[i], isCSS ?
+							node = env.gecko ? createNode("style") : createNode("link", {
+								href: url,
+								rel: "stylesheet"
+							}) : (node = createNode("script", {
+								src: url
+							})).async = !1, node.className = "lazyload", node.setAttribute("charset", "utf-8"), env
+							.ie && !isCSS && "onreadystatechange" in node && !("draggable" in node) ? node
+							.onreadystatechange = function () {
+								/loaded|complete/.test(node.readyState) && (node.onreadystatechange = null,
+									_finish())
+							} : isCSS && (env.gecko || env.webkit) ? env.webkit ? (p.urls[i] = node.href,
+								pollWebKit()) : (node.innerHTML = '@import "' + url + '";', pollGecko(node)) : node
+							.onload = node.onerror = _finish, nodes.push(node);
+						for (i = 0, len = nodes.length; i < len; ++i) head.appendChild(nodes[i])
+					}
+				}
+
+				function pollGecko(node) {
+					var hasRules;
+					try {
+						hasRules = !!node.sheet.cssRules
+					} catch (ex) {
+						return void((pollCount += 1) < 200 ? setTimeout((function () {
+							pollGecko(node)
+						}), 50) : hasRules && finish("css"))
+					}
+					finish("css")
+				}
+
+				function pollWebKit() {
+					var css = pending.css,
+						i;
+					if (css) {
+						for (i = styleSheets.length; --i >= 0;)
+							if (styleSheets[i].href === css.urls[0]) {
+								finish("css");
+								break
+							} pollCount += 1, css && (pollCount < 200 ? setTimeout(pollWebKit, 50) : finish("css"))
+					}
+				}
+				return {
+					css: function (urls, callback, obj, context) {
+						load("css", urls, callback, obj, context)
+					},
+					js: function (urls, callback, obj, context) {
+						load("js", urls, callback, obj, context)
+					}
+				}
+			}(this.document);
+
+		</script>
+		<script>
+			LazyLoad.css([
+				'https://cdn.jsdelivr.net/npm/@mdi/font@5.8.55/css/materialdesignicons.min.css',
+				'https://cdn.linearicons.com/free/1.0.0/icon-font.min.css',
+				'https://pro.fontawesome.com/releases/v5.10.0/css/all.css'
+			], function () {});
+
+		</script>
+		<script src="/Data/Sites/1/skins/default/js/global.min.js"></script>
+		<script>
+			LazyLoad.js([
+				'/Data/Sites/1/skins/default/js/custom.js',
+				// '/Data/Sites/1/skins/default/js/comment.js',
+				'/Data/Sites/1/skins/default/js/moment.min.js',
+				'/Data/Sites/1/skins/default/js/main.min.js'
+			], function () {});
+
+		</script>
+	</form>
+</body>
+
+</html>

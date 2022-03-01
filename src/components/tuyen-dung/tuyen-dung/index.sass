@@ -1,0 +1,84 @@
+.recruit_page
+	background-color: color(cream)
+.wrap-box
+	display: flex
+	@media screen and ( max-width: 1279.9px )
+		display: block
+	.wrap-img
+		flex: 0 0 735px
+		@media screen and ( max-width: 1279.9px )
+			flex: 0 0 100%
+		.img
+			+img-scale(430/735)
+	.box-content
+		padding-right: r(75px)
+		height: 100%
+		@media screen and ( max-width: 1023.9px )
+			padding-right: 0
+		.content
+			+line(8)
+			color: color(text)
+			line-height: r(24px)
+			font-weight: 400
+		.seemore
+			display: flex
+			align-items: center
+			justify-content: flex-end
+			margin-left: auto
+			margin-top: r(10px)
+			width: fit-content
+			span
+				color: color(main-text)
+				font-weight: 700
+				text-transform: uppercase
+				padding-right: 16px
+				color: color(main-text)
+				font-size: 11px
+				letter-spacing: 1px
+				display: block
+			&.home-6
+				.wrap-button
+					position: static
+	.img
+		img
+			height: 100%
+.page-recruit
+	.desc-title
+		margin-bottom: 23px
+	.wrap-box .box-content .seemore
+		margin-top: 26px
+.page-recruit-2
+	background-color: #eee7da
+	.wrap-title-main
+		.content
+			display: none
+	.row
+		margin-left: -20px!important
+		margin-right: -20px!important
+		[class*="col"]
+			padding: 0 20px!important
+	.related-item
+		box-shadow: -8px 0 46px rgba(0, 0, 0, 0.09)
+		background-color: color(cream)
+		.address
+			padding-right: 20px
+			@media screen and ( max-width: 360px )
+				padding-right: 10px
+		.arrow
+			margin-left: auto
+			em
+				color: #725639
+				transition: .2s all
+		&:hover
+			.arrow
+				em
+					color: color(main)
+	.button-readmore
+		margin-left: auto
+		margin-right: auto
+		font-weight: 700
+		margin-top: r(10px)
+		*
+			color: white
+		&::before
+			display: none

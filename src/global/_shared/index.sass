@@ -1,0 +1,93 @@
+@import "./src/global/_shared/_mixins.sass"
+@import "./src/global/_shared/_variable.sass"
+@import "./src/global/_shared/_reset.sass"
+@import "./src/global/_shared/_grid.sass"
+@import "./src/global/_shared/icon.sass"
+@import "./src/global/_shared/util.sass"
+
+@import "./src/global/header/header.sass"
+@import "./src/global/footer/footer.sass"
+
+@import "./src/global/_shared/section.sass"
+@import "./src/global/_shared/title.sass"
+@import "./src/global/_shared/button.sass"
+@import "./src/global/_shared/item.sass"
+
+@import "./src/global/_shared/form.sass"
+@import "./src/global/_shared/form-group.sass"
+@import "./src/global/_shared/pagination.sass"
+@import "./src/global/_shared/animation.sass"
+@import "./src/global/_shared/search.sass"
+
+.edit-link i:before
+	content: '✏️'
+.news-list
+	+gg-speed(auto, $container)
+.dropdown
+	position: relative
+	cursor: pointer
+	.dropdown-menu
+		position: absolute
+		top: 150%
+		right: 0
+		width: max-content
+		background: white
+		border: 1px solid color(main)
+		padding: 10px 15px
+		opacity: 0
+		pointer-events: none
+		transition: .2s ease-in-out all
+		z-index: 11
+	a
+		transition: .2s ease-in-out all
+		&:hover
+			color: color(main)
+	&.active, &:hover
+		.dropdown-menu
+			top: 100%
+			pointer-events: auto
+			opacity: 1
+.back-to-top
+	position: fixed
+	width: 60px
+	height: 60px
+	border-radius: 50%
+	border: 1px solid color(main)
+	display: flex
+	justify-content: center
+	align-items: center
+	bottom: 55px
+	right: 15px
+	z-index: 999
+	transition: .2s ease-in-out all
+	cursor: pointer
+	opacity: 0
+	pointer-events: none
+	em
+		font-size: 20px
+		color: color(main)
+		transition: .2s ease-in-out all
+	&:hover
+		background: color(main)
+		em
+			color: #ffffff
+	&.active
+		opacity: 1
+		pointer-events: auto
+	@media(max-width: 575.89px)
+		width: 35px
+		height: 35px
+		background: white
+		em
+			font-size: 14px
+
+.full-content
+	+text-gray
+	*
+		+text-gray
+		+ *
+			margin-top: 15px
+	li
+		margin-top: 10px
+ul.type-none
+	+type-none

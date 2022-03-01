@@ -1,0 +1,145 @@
+.page-recruit-detail
+	&.section
+		padding-bottom: 0
+.wrap-info
+	padding: r(35px)
+	box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.2)
+	margin-bottom: r(30px)
+	background: white
+
+.wrap-header
+	.title
+		color: color(main-text)
+		font-size: r(24px)
+		line-height: r(32px)
+		font-weight: 700
+		padding-bottom: 11px
+		border-bottom: thin solid color(main)
+	.box-option
+		display: flex
+		align-items: center
+		padding: 12px 0
+		color: #999999
+		font-size: 14px
+		border-bottom: thin solid #e1e1e1
+		line-height: 2
+		.date
+			letter-spacing: 0.7px
+			position: relative
+			&::before
+				content: ""
+				position: absolute
+				width: 1px
+				height: 100%
+				right: -20px
+				background-color: #e1e1e1
+		.share
+			margin-left: 40px
+			display: flex
+			@media screen and ( max-width: 575.89px )
+				flex-wrap: wrap
+				a
+					margin-right: 0px!important
+					+ a
+						margin-left: 13px!important
+				span
+					margin-right: 9px!important
+			span, a
+				margin-right: 30px
+			em
+				color: color(main-text)
+				width: 11px
+				height: 20px
+				font-size: 20px
+.wrap-body
+	display: flex
+	padding: r(30px) 0 r(10px)
+	@media screen and ( max-width: 1023.9px )
+		display: block
+	.img
+		+img-scale(275/325)
+		flex: 0 0 325px
+		padding-top: 32.61538%
+		@media screen and ( max-width: 1023.9px )
+			padding-top: 50%
+.wrap-table
+	margin-left: r(60px)
+	width: 100%
+	@media screen and ( max-width: 1279.9px )
+		margin-left: r(30px)
+	@media screen and ( max-width: 1023.9px )
+		margin-left: 0
+		margin-top: r(20px)
+	table
+		width: 100%
+		font-size: 14px
+		tr
+			height: 35px
+			td
+				&:first-child
+					color: #0a0a0a
+					font-weight: bold
+					width: 40%
+
+.wrap-content
+	ul
+		padding-top: r(30px)
+		padding-right: r(30px)
+		padding-left: 0
+		list-style: none
+		@media screen and ( max-width: 767.9px )
+			padding-right: 0
+		li
+			padding-bottom: r(20px)
+			padding-left: r(30px)
+			letter-spacing: .8px
+			position: relative
+			color: #666666
+			&:last-child
+				padding-bottom: 0
+			&::before
+				content: "chevron_right"
+				position: absolute
+				font-family: "Material Icons"
+				left: 0
+				top: 0
+				line-height: 1.5
+				font-weight: bold
+				color: color(main)
+
+.wrap-related
+	.related-item
+		background-color: white
+		padding: r(18px) r(20px)
+		box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.2)
+		display: block
+		border: 1px dashed color(main)
+		transition: .3s all ease-in-out
+		margin-bottom: r(30px)
+		&:hover
+			border: 1px dashed color(main-text)
+		.title
+			color: color(main-text)
+			font-weight: bold
+			text-transform: uppercase
+			margin-bottom: 5px
+		.address-time, .address, .time, .price
+			display: flex
+			align-items: center
+			*
+				font-size: 15px
+			em
+				font-size: 15px
+				padding-right: r(7px)
+		.address-time
+			color: #999999
+			margin-bottom: 5px
+			.time
+				padding-left: 10px
+			@media screen and ( max-width: 1279.9px ) and (min-width: 1024px)
+				display: block
+				.time
+					padding-left: 0
+		.price
+			color: color(main)
+

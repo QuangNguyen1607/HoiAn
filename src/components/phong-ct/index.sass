@@ -1,0 +1,290 @@
+.page-phong-ct
+	main
+		background-color: color(cream)
+	.phong-ct-tab
+		.title-product
+			margin-bottom: 20px
+	.page-uu-dai-product
+		.wrap-box-flex
+			.box-left
+				flex: 0 0 57.31%
+				max-width: 57.31%
+				height: 470px
+				@media screen and ( max-width: 1279.89px )
+					flex: 0 0 50%
+					max-width: 50%
+				@media screen and ( max-width: 1023.67px )
+					flex: 0 0 100%
+					max-width: 100%
+					height: auto
+			.box-content
+				flex: 0 0 42.69%
+				max-width: 42.69%
+				height: 470px
+				padding-top: 35px
+				padding-left: 58px
+				@media screen and ( max-width: 1279.89px )
+					flex: 0 0 50%
+					max-width: 50%
+					padding-left: 25px
+				@media screen and ( max-width: 1023.67px )
+					flex: 0 0 100%
+					max-width: 100%
+					height: auto
+				.title-product
+					margin-bottom: 15px
+		.wrap-form
+			padding-top: 20px
+			border-bottom: 1px solid #e1e1e1
+			padding-bottom: 10px
+			.form-group
+				flex: 0 0 235px
+				margin-right: 10px
+				margin-bottom: 10px
+				max-width: 235px
+				position: relative
+				@media screen and ( max-width: 1023.67px )
+					flex: 0 0 60%
+					max-width: 60%
+				@media screen and ( max-width: 575.89px )
+					flex: 0 0 100%
+					max-width: 100%
+					margin-right: 0px
+				&::after
+					content: 'event'
+					font-family: "Material Icons"
+					position: absolute
+					top: 50%
+					right: 15px
+					transform: translateY(-50%)
+					color: color(main)
+					font-size: 16px
+					font-weight: 400
+				input[type="text"]
+					width: 100%
+					height: 40px
+					box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.1)
+					background-color: #ffffff
+					border: 0
+					outline: 0
+					padding-left: 20px
+					color: color(main-text)
+					font-size: r(14px)
+					font-weight: 400
+					letter-spacing: 1.05px
+					opacity: 1
+					&:placeholder
+						opacity: 0.5
+			.form-flex
+				display: flex
+				@media screen and ( max-width: 575.89px )
+					flex-wrap: wrap
+				.frm-btnwrap
+					flex: 1
+					.frm-btn
+						position: relative
+						z-index: 2
+						overflow: hidden
+						width: 100%
+						height: 40px
+						background-color: color(main)
+						&:hover
+							&::after
+								width: 120%
+						&::before
+							content: "\e87a"
+							font-family: "Linearicons-Free"
+							font-weight: 400
+							font-size: 20px
+							position: absolute
+							left: 0
+							color: white
+							top: 50%
+							transform: translateY(-50%)
+						&::after
+							content: ''
+							position: absolute
+							left: 50%
+							z-index: -1
+							top: 0
+							background-color: color(light-blue)
+							width: 0
+							height: 100%
+							transform: translateX(-50%) skewX(20deg)
+							transition: .3s all ease-in-out
+						input
+							width: 100%
+							height: 100%
+							border: 0
+							outline: none
+							color: #ffffff
+							font-size: r(14px)
+							z-index: 3
+							background-color: transparent
+							font-weight: 700
+							text-transform: uppercase
+							letter-spacing: 1.4px
+	.box-content
+		.table-price
+			padding-bottom: 1px!important
+			td
+				padding-bottom: 14px!important
+			.strong
+				color: #0a0a0a
+				font-size: r(14px)
+				font-weight: 700
+				letter-spacing: 0.7px
+				padding-right: 42px
+				white-space: nowrap
+			.text
+				color: #666666
+				font-size: r(14px)
+				font-weight: 400
+				letter-spacing: 0.7px
+.dich-vu-mien-phi
+	padding-top: 55px
+	padding-bottom: 60px
+	@media screen and ( max-width: 1023.89px )
+		padding-top: 25px
+		padding-bottom: 30px
+	.title-product
+		margin-bottom: 25px
+	.wrap-box-service
+		margin-left: -35px
+		margin-right: -35px
+		display: flex
+		flex-wrap: wrap
+		@media screen and ( max-width: 575.89px )
+			margin-left: 0
+			margin-right: 0
+		.wrap-service
+			padding-right: 35px
+			padding-left: 35px
+			flex: 0 0 25%
+			max-width: 25%
+			@media screen and ( max-width: 1023.67px )
+				flex: 0 0 50%
+				max-width: 50%
+			@media screen and ( max-width: 575.89px )
+				flex: 0 0 100%
+				max-width: 100%
+				width: 100%
+				padding-left: 0
+				padding-right: 0
+			.box-service
+				width: 100%
+				height: 80px
+				background-color: color(main)
+				display: flex
+				align-items: center
+				margin-bottom: 30px
+				padding: 0 30px
+				transition: .3s all ease-in-out
+				&:hover
+					transform: translateY(-3px)
+					box-shadow: 3px 4px 8px #00000033
+				img
+					margin-right: 20px
+				p
+					color: #ffffff
+					font-size: 1rem
+					font-weight: 400
+.page-gallery-main
+	.wrap-box-img
+		.row
+			div:nth-child(5)
+				.box-img-big
+					.title-show
+						bottom: 20px
+					a
+						&::before
+							opacity: 1
+							bottom: 0
+							visibility: visible
+	.row
+		margin: 0 -10px
+		[class*="col"]
+			padding: 0 10px
+	.title-product
+		margin-bottom: 20px
+	.box-img-small
+		position: relative
+		overflow: hidden
+		z-index: 2
+		margin-bottom: 14px
+		&:hover
+			// .title-show
+			// 	bottom: 20px
+			// a
+			// 	&::before
+			// 		opacity: 1
+			// 		bottom: 0
+			// 		visibility: visible
+		a
+			z-index: 2
+			&::before
+				content: ''
+				position: absolute
+				left: 0
+				bottom: -100%
+				width: 100%
+				height: 100%
+				background: linear-gradient(1deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.3533788515406162) 100%)
+				visibility: hidden
+				transition: .3s all ease-in-out
+				opacity: 0
+				z-index: 1
+			+img-scale(225/396)
+			@media screen and ( max-width: 1023.67px )
+				+img-scale(0.38)
+	.title-show
+		position: absolute
+		bottom: -100%
+		transition: .3s all ease-in-out
+		left: 0
+		width: 100%
+		z-index: 3
+		text-align: center
+		pointer-events: none
+		span
+			color: #ffffff
+			font-size: 1rem
+			font-weight: 400
+			margin-left: 12px
+	.box-img-big
+		position: relative
+		overflow: hidden
+		z-index: 2
+		margin-bottom: 14px
+		// &:hover
+		// 	.title-show
+		// 		bottom: 20px
+		// 	a
+		// 		&::before
+		// 			opacity: 1
+		// 			bottom: 0
+		// 			visibility: visible
+		a
+			z-index: 2
+			&::before
+				content: ''
+				position: absolute
+				left: 0
+				bottom: -100%
+				width: 100%
+				height: 100%
+				background: linear-gradient(1deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.3533788515406162) 100%)
+				visibility: hidden
+				transition: .3s all ease-in-out
+				opacity: 0
+				z-index: 1
+		a
+			width: 100%
+			height: 340px
+			display: block
+			@media screen and ( max-width: 1023.67px )
+				height: auto
+			img
+				width: 100%
+				height: 100%
+				object-fit: cover

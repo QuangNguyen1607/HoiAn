@@ -1,0 +1,146 @@
+section.page-uu-dai-product.tien-ich-nha-hang-ct-1
+	.container
+		.wrap-box-flex
+			.box-left
+				.wrap-slide
+					.swiper-container
+						.swiper-wrapper
+							-for(i=0;i<5;i++)
+								.swiper-slide
+									.img
+										a(href="./img/uu-dai-ct/uudai-ct.png" data-fancybox)
+											img(data-src="./img/uu-dai-ct/uudai-ct.png" alt="" class="lazyload")
+						.swiper-pagination
+						.wrap-button
+							.button-prev-in.button-sw-white
+								em.lnr.lnr-arrow-left
+							.button-next-in.button-sw-white
+								em.lnr.lnr-arrow-right
+			.box-content
+				h2.title-product Nhà hàng Mai Châu Hideaway
+				.desc Với tâm niệm mang đến không gian ẩm thực ấn tượng đậm chất văn hóa Việt Nam, chúng tôi đã kiến tạo nên nhà hàng Bamboo với chất liệu tre và gỗ thân thiện với thiên nhiên. Trong đó, điểm nhấn là cầu thang tre xoắn kết ở khu vực lễ tân, những gam màu vàng của gỗ kết hợp với ánh sáng tạo nên không gian ấm áp cho quý khách. Giữa tổng thể không gian thư thái, an yên của nhà hàng Bamboo, chắc chắn quý khách sẽ có trải nghiệm ẩm thực thăng hoa, tránh xa những xô bồ, bức bách của cuộc sống thường nhật.
+					| Đặc biệt, từ nhà hàng tầng 2 với góc nhìn toàn cảnh hồ Hòa Bình thơ mộng, lãng mạn, ẩm thực sẽ được nâng tầm bởi không gian gắn liền với thiên nhiên, khai phá vị giác của thực khách.
+					| Những phong vị ẩm thực được chế biến cầu kỳ, tinh tế dưới bàn tay khéo léo của đội ngũ đầu bếp có tâm đã góp phần làm nên sức hấp dẫn, sự độc đáo cho nhà hàng Bamboo. Chúng tôi phục vụ các món ăn mang phong vị châu  u, châu Á theo khẩu vị của quý khách. Trong đó, những đặc sản Tây Bắc như cơm lam, lợn mán, gà đồi được chế biến đặc sắc chắc chắn sẽ nâng tầm trải nghiệm ẩm thực của bạn.| Còn gì hạnh phúc hơn khi thưởng thức bữa ăn bên cạnh những người mà bạn yêu thương nhất trong một khung cảnh thanh bình. Đừng quên ghi lại những giây phút tuyệt vời mà bạn khó có thể tìm thấy trong cuộc đời bên không gian lãng mạn và phong vị ẩm thực mê đắm tại Mai Châu Hideaway Lake Resort nhé.
+				.wrap-share
+					strong Chia sẻ
+					a(href="")
+						em.fab.fa-facebook-f
+					a(href="")
+						em.fab.fa-twitter
+section.sec-menu-main.small-section(setBackground="./img/menu-main.png")
+	.container
+		.title-product.white Menu
+		.row
+			-for(i=0;i<4;i++)
+				.col-lg-3.col-sm-6
+					.box-items
+						.wrap-text
+							.title Menu món ăn
+							.desc Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+						a(href="").button-menu
+							em.lnr.lnr-arrow-right
+section.page-gallery-main.small-section(setBackground="./img/bg-tien-ich-4.png")
+	.container
+		.title-product Một số hình ảnh về Tour
+		.wrap-box-img
+			.row
+				-for(i=0;i<3;i++)
+					.col-lg-4.col-sm-12
+						.box-img-small
+							a(href="./img/gl-1.png" data-fancybox)
+								img(data-src="./img/gl-1.png" alt="" class="lazyload")
+							.title-show
+								img(src="./img/icon/camera.png" alt="")
+								span Xem tất cả ảnh ( 200 ảnh )
+				-for(i=0;i<2;i++)
+					.col-lg-6
+						.box-img-big
+							a(href="./img/gl-1.png" data-fancybox)
+								img(data-src="./img/gl-1.png" alt="" class="lazyload")
+							.title-show
+								img(src="./img/icon/camera.png" alt="")
+								span Xem tất cả ảnh ( 200 ảnh )
+section.box-comment-page
+	.container
+		.comment-on-site
+			.title-product Đánh giá
+			.wrap-cm-2
+				.wrap-form.box-comment
+					//- .icon-close
+					//- 	em.material-icons close
+					.form-group.box-text
+						textarea(name="" cols="30" rows="10" placeholder="Nội dung")
+					.wrap-flex
+						.rating-star-number
+							.text Đánh giá
+							.rating
+								img(src="./img/icon/star-on.png" alt="")
+								img(src="./img/icon/star-on.png" alt="")
+								img(src="./img/icon/star-off.png" alt="")
+								img(src="./img/icon/star-off.png" alt="")
+								img(src="./img/icon/star-off.png" alt="")
+								input(type="hidden")
+						.form-group
+							input(type="text" placeholder="Họ tên ( bắt buộc)")
+						.form-group
+							input(type="text" placeholder="Email")
+						.form-group
+							input(type="text" placeholder="Số điện thoại")
+						.wrap-btn
+							a(href="#" class="btn-send") Gửi
+			.show-comment
+				.section-title.fs20 Tất cả bình luận
+				.wrap-bl
+					-for(i=0;i<5;i++)
+						.binh-luan
+							.avatar
+								img(data-src="./img/avatar.png" alt="" class="lazyload")
+							.content
+								.name Trần Nam Anh
+								.rating-star
+									div(style="width:100%")
+								.noi-dung Cho mình hỏi mình ở quận 1, TP.HCM thì đặt hàng mấy ngày nhận được ạ? Có được kiểm tra hàng trước khi nhận không ạ?
+								.wrap-traloi
+									a(href="javascript:void(0)" class="button-tra-loi") Trả lời
+									.date 12 Tháng 12 2020 1:48
+								.box-binh-luan
+									.wrap-form
+										.form-group
+											textarea(name="" cols="30" rows="10" placeholder="Hãy nhập bình luận của bạn")
+										.form-flex
+											.form-group
+												input(type="text" placeholder="Mời bạn nhập tên")
+											.form-group
+												input(type="text" placeholder="Mời bạn nhập email")
+											a.send(href="" class="button-binh-luan") Gửi bình luận
+				.wrap-button
+					.button-expand
+						span Xem thêm
+						em.material-icons arrow_drop_down
+					.button-rut
+						span Rút gọn
+						em.material-icons arrow_drop_up
+section.home-3.slide-product-main
+	.container
+		.title-product Tiện ích khác
+		.wrap-slide
+			.swiper-container
+				.swiper-wrapper
+					-for(i=0;i<5;i++)
+						.swiper-slide
+							.box-product-slide
+								.img
+									a(href="")
+										img(data-src="./img/home/h3-1.png" alt="" class="lazyload")
+								.box-desc
+									.wrap-text
+										a(href="").title-p Hồ bơi vô cực
+									a(href="").button-readmore Xem thêm
+			.wrap-button
+				.button-prev.button-sw-1
+					em.lnr.lnr-arrow-left
+				.button-next.button-sw-1
+					em.lnr.lnr-arrow-right
+
+
+

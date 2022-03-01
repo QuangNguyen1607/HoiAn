@@ -1,0 +1,126 @@
+.file-nav-1
+	&.active
+		background-color: #fff
+	.category-page
+		padding: 0 15px
+		@media screen and ( min-width: 1024px )
+			display: none
+		@media screen and ( max-width: 767.89px )
+			position: fixed
+			top: 100px
+			left: -100%
+			opacity: 0
+			visibility: hidden
+			transition: .3s all ease-in-out
+			&.show-p
+				left: 0
+				opacity: 1
+				visibility: visible
+				z-index: 999
+				width: 100%
+		&.active
+			.title-header
+				width: 100%
+				opacity: 1
+				visibility: visible
+			.list-menu-page
+				width: 100%
+				padding-left: 10px
+				opacity: 1
+				visibility: visible
+				max-height: 100%
+		.title-header
+			display: none
+			align-items: center
+			background-color: color(main-text)
+			padding: 7px 10px
+			border-radius: 5px
+			width: 43px
+			overflow: hidden
+			transition: .3s all ease-in-out
+			@media screen and ( max-width: 767.89px )
+				display: flex
+
+			span
+				font-weight: bold
+				color: white
+				white-space: nowrap
+			em
+				color: white
+				margin-right: 10px
+		.list-menu-page
+			background-color: #fff
+			padding-top: 5px
+			padding-bottom: 5px
+			list-style: none
+			border-radius: 0px 0px 5px 5px
+			box-shadow: 2px 3px 10px #0000001c
+			overflow: hidden
+			width: 0
+			max-height: 0
+			padding-left: 0
+			opacity: 0
+			visibility: hidden
+			transition: .3s all ease-in-out
+			li
+				display: flex
+				align-items: center
+				a
+					white-space: nowrap
+					&.active
+						color: color(main)
+				&::before
+					content: 'keyboard_arrow_right'
+					font-family: 'Material Icons'
+					font-size: 18px
+					color: color(main-text)
+					margin-right: 5px
+	.list-menu
+		padding-left: 0px
+		list-style: none
+		display: flex
+		align-items: center
+		justify-content: center
+		border-bottom: 1px solid rgba(color(main-text), 0.3)
+		overflow: auto
+		scroll-snap-type: x mandatory
+		@media screen and ( max-width: 767.89px )
+			display: none
+		li
+			min-width: 200px
+			scroll-snap-align: start
+			&.active
+				a
+					border-bottom: 3px solid color(main)
+					font-weight: 600
+			+ li
+				a
+					&::before
+						content: ''
+						width: 1px
+						height: 18px
+						position: absolute
+						top: 50%
+						transform: translateY(-50%)
+						left: 0
+						background-color: color(main-text)
+						opacity: 0.3
+			a
+				width: 100%
+				padding: 0 20px
+				padding-bottom: 15px
+				padding-top: 15px
+				color: color(main-text)
+				font-size: 1rem
+				display: block
+				font-weight: 400
+				position: relative
+				text-align: center
+				transition: .3s all ease-in-out
+				border: 3px solid transparent
+				&.active
+					border-bottom: 3px solid color(main)
+					font-weight: 600
+				&:hover
+					color: color(main)
+		

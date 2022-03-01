@@ -1,0 +1,48 @@
+.main-title
+	color: color(main-text)
+	font-size: r(36px)
+	font-weight: 600
+	position: relative
+	padding-top: 25px
+	@media screen and ( max-width: 575.89px )
+		font-size: 1.6rem
+		margin-bottom: 10px
+	&::before
+		content: ''
+		width: r(50px)
+		height: r(5px)
+		position: absolute
+		top: 0
+		left: 0 
+		background-color: color(cream)
+		border-radius: 2.5px
+	&.line-blue 
+		&:before 
+			background-color: color(light-blue)
+	&.line-main-text 
+		&:before 
+			background-color: color(main-text)
+.wrap-title-main
+	margin-bottom: 27px
+	&.white
+		.main-title
+			color: white
+		.desc-title
+			color: white
+.title-product
+	color: color(main-text)
+	font-size: r(24px)
+	font-weight: 600
+	line-height: normal
+	position: relative
+	padding-bottom: 16px
+	&.white
+		color: white
+	&::before
+		content: ''
+		position: absolute
+		bottom: 0
+		left: 0
+		width: 50px
+		height: 3px
+		background-color: color(main)

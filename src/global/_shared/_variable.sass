@@ -1,0 +1,21 @@
+$breakpoints: (sm: 576px, md: 768px, lg: 1024px, xl: 1280px) !default
+
+$colors: ('main': #00344c, 'main-text': #192c4d, 'cream': #faf7f1, 'light-blue': #005d76, 'text': #111111, 'white': #ffffff, '333': #333333, '666': #666666, '999': #999999, 'dark': #111111) !default
+
+$font-weight: ('thin': 100, 'light': 300, 'rengular': 400, 'medium': 500, 'bold': 700, 'black': 900) !default
+
+=list-loop($className, $breakpoint, $styleName)
+	$min: 12
+	$max: 24
+	$offset: 2
+	$unit: 'rem'
+	@while $min <= $max
+		@if $breakpoint != ''
+			#{$className + $breakpoint + $min}
+				#{$styleName}: #{$min/16 + $unit}
+			$min: $min + $offset
+		@else
+			#{$className + $min}
+				#{$styleName}: #{$min/16 + $unit}
+			$min: $min + $offset
+

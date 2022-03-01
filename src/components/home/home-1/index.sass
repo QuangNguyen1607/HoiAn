@@ -1,0 +1,50 @@
+.home-1
+	position: relative
+	background-position: bottom left !important
+	&::before
+		content: ''
+		background-image: url("../img/home/h1-bg.png")
+		position: absolute
+		bottom: 0
+		right: 120px
+		width: 450px
+		height: 300px
+		@media screen and ( max-width: 1023.89px )
+			right: 0
+	.box-content
+		padding-right: 64px
+		@media screen and ( max-width: 767.67px )
+			padding-right: 0
+		ul
+			padding-left: 19px
+			li
+				list-style: none
+				color: #111111
+				font-size: 1rem
+				font-weight: 400
+				line-height: 24px
+				display: flex
+				align-items: flex-start
+				&::before
+					content: ''
+					background-image: url(../img/icon/icon-list.png)
+					width: 7px
+					height: 7px
+					display: inline-block
+					background-repeat: no-repeat
+					margin-right: 8px
+					margin-top: 7px
+					padding-right: 7px
+				+ li
+					margin-top: 25px
+		.button-readmore
+			margin-top: 30px
+	.box-img
+		width: 100%
+		height: 100%
+		img
+			width: 100%
+			height: 100%
+			padding-top: 88px
+			@media screen and ( max-width: 1023.89px )
+				padding-top: 40px

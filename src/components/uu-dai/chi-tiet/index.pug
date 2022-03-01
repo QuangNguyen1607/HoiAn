@@ -1,0 +1,125 @@
+section.page-uu-dai-product
+	.container
+		.wrap-box-flex
+			.box-left
+				a(href="./img/uu-dai-ct/uudai-ct.png" data-fancybox)
+					img(data-src="./img/uu-dai-ct/uudai-ct.png" alt="" class="lazyload")
+			.box-content
+				h2.title-product Ưu đãi vàng đón thu sang
+				table.table-price
+					tr
+						td.date 2 ngày 1 đêm
+						td.price 675.000 VNĐ/ Khách
+					tr
+						td.date 3 ngày 2 đêm
+						td.price 1350.000 VNĐ/ Khách
+				.desc Tự hào là khu nghỉ dưỡng sinh thái duy nhất nằm trong lòng hồ Hòa Bình, cách Hà Nội chỉ 2,5 tiếng lái xe, Mai Châu Hideaway Lake Resort níu chân du khách bởi không gian thoáng đãng, sự bình yên đến lạ và thư thái bởi những mảng xanh rộng lớn – đó là sắc xanh của thiên nhiên với hồ nước, cây cối và không gian của núi rừng Tây Bắc.
+				.wrap-share
+					strong Chia sẻ
+					a(href="")
+						em.fab.fa-facebook-f
+					a(href="")
+						em.fab.fa-twitter
+section.page-uu-dai-product-2(setBackground="./img/uu-dai/banner-uudai.png")
+	.container
+		.wrap-box-infomation
+			.wrap(data-toggle="tabslet")
+				ul.tabslet-tab.tab-header
+					li.active
+						a(href="#tab1") Ưu đãi bao gồm
+					li
+						a(href="#tab2") Điều kiện áp dụng
+				.tabslet-content.active#tab1
+					ul
+						-for(i=0;i<3;i++)
+							li 01 đêm nghỉ tại Mai Châu Hideaway Lake Resort, phòng view Hồ
+							li Miễn phí tham gia múa sạp, múa xòe hoa (áp dụng cho khách đặt phòng đêm thứ 6 & thứ 7)
+							li Miễn phí xe đạp thăm quan
+							li Coupon giảm giá 30% dịch vụ massage
+				.tabslet-content#tab2
+					ul
+						li 01 đêm nghỉ tại Mai Châu Hideaway Lake Resort, phòng view Hồ
+						li Miễn phí tham gia múa sạp, múa xòe hoa (áp dụng cho khách đặt phòng đêm thứ 6 & thứ 7)
+section.box-comment-page
+	.container
+		.comment-on-site
+			.title-product Đánh giá
+			.wrap-cm-2
+				.wrap-form.box-comment
+					//- .icon-close
+					//- 	em.material-icons close
+					.form-group.box-text
+						textarea(name="" cols="30" rows="10" placeholder="Nội dung")
+					.wrap-flex
+						.rating-star-number
+							.text Đánh giá
+							.rating
+								img(src="./img/icon/star-on.png" alt="")
+								img(src="./img/icon/star-on.png" alt="")
+								img(src="./img/icon/star-off.png" alt="")
+								img(src="./img/icon/star-off.png" alt="")
+								img(src="./img/icon/star-off.png" alt="")
+								input(type="hidden")
+						.form-group
+							input(type="text" placeholder="Họ tên ( bắt buộc)")
+						.form-group
+							input(type="text" placeholder="Email")
+						.form-group
+							input(type="text" placeholder="Số điện thoại")
+						.wrap-btn
+							a(href="#" class="btn-send") Gửi
+			.show-comment
+				.section-title.fs20 Tất cả bình luận
+				.wrap-bl
+					-for(i=0;i<5;i++)
+						.binh-luan
+							.avatar
+								img(src="./img/avatar.png" alt="")
+							.content
+								.name Trần Nam Anh
+								.rating-star
+									div(style="width:100%")
+								.noi-dung Cho mình hỏi mình ở quận 1, TP.HCM thì đặt hàng mấy ngày nhận được ạ? Có được kiểm tra hàng trước khi nhận không ạ?
+								.wrap-traloi
+									a(href="javascript:void(0)" class="button-tra-loi") Trả lời
+									.date 12 Tháng 12 2020 1:48
+								.box-binh-luan
+									.wrap-form
+										.form-group
+											textarea(name="" cols="30" rows="10" placeholder="Hãy nhập bình luận của bạn")
+										.form-flex
+											.form-group
+												input(type="text" placeholder="Mời bạn nhập tên")
+											.form-group
+												input(type="text" placeholder="Mời bạn nhập email")
+											a.send(href="" class="button-binh-luan") Gửi bình luận
+				.wrap-button
+					.button-expand
+						span Xem thêm
+						em.material-icons arrow_drop_down
+					.button-rut
+						span Rút gọn
+						em.material-icons arrow_drop_up
+section.post-uu-dai-slide
+	.container
+		.title-product Ưu đãi khác
+		.wrap-slide
+			.swiper-container
+				.swiper-wrapper
+					-for(i=0;i<5;i++)
+						.swiper-slide
+							.item-post
+								.img.zoom-img
+									a(href="")
+										img(data-src="./img/uu-dai-ct/ud-1.png" alt="" class="lazyload")
+								.content
+									a(href="").title Chương trình ưu đãi cho người dân Hòa Bình du lịch Mai Châu
+									.date Từ 01.08.2020 - 01.09.2020
+			.wrap-button
+				.button-prev.button-sw-1
+					em.lnr.lnr-arrow-left
+				.button-next.button-sw-1
+					em.lnr.lnr-arrow-right
+
+
+

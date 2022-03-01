@@ -1,0 +1,40 @@
+.page-news-list
+	background-color: color(cream)
+	[class*="col-"]
+		margin-bottom: r(30px)
+	.wrap-title-main
+		margin-bottom: r(30px)
+	.item
+		background-color: white
+		transition: .3s all ease-in-out
+		a
+			display: flex
+			flex-direction: column
+
+		.img
+			+img-scale(400/600)
+		.wrap-content
+			padding: r(15px)
+			box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.05)
+			.title
+				font-size: r(24px)
+				color: #111111
+				line-height: r(30px)
+				margin-bottom: 5px
+				font-weight: 500
+				height: 60px
+				transition: .3s all ease-in-out
+			time
+				color: color(main)
+				font-size: 12px
+				letter-spacing: 1.2px
+		&:hover
+			.wrap-content
+				.title
+					color: color(main)
+	[class*='col-']:nth-child(n+3) .item
+		.wrap-content
+			.title
+				font-size: r(18px)
+
+

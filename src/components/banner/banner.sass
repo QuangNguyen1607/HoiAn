@@ -1,0 +1,163 @@
+.banner-home
+	position: relative
+	&::before
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		background-color: rgba(0, 0, 0, 0.25)
+		pointer-events: none 
+	.swiper-slide
+		text-align: center
+		font-size: 18px
+		background: #fff
+		display: flex
+		justify-content: center
+		align-items: center
+		&-active
+			.img
+				img
+					transform: scale(1.1)!important
+	.box-banner
+		position: relative
+		width: 100%
+		@media screen and ( max-width: 767.67px )
+			height: 100%
+		.img
+			width: 100%
+			height: inherit
+			+img-scale(1080/1920)
+			+video-scale(1080/1920)
+			video
+				width: 100%
+				height: 100%
+				transform: scale(1.1)
+				@media screen and ( max-width: 575.89px )
+					transform: scale(1.6)
+			img
+				height: 100%
+				width: 100%
+				object-fit: cover
+				transition: all 5s cubic-bezier(.22, .44, 0, 1)
+				transform: scale(1)
+	.box-text
+		position: absolute
+		top: 21%
+		left: 50%
+		max-width: 510px
+		width: 100%
+		transform: translate(-50%,-50%)
+		display: flex
+		flex-direction: column
+		align-items: center
+		@media screen and ( max-width: 1279.89px )
+			top: 40%
+		@media screen and ( max-width: 1023.89px )
+			top: 40%
+
+		.title-small
+			color: #ffffff
+			font-size: r(24px)
+			font-weight: 700
+			margin-bottom: 10px
+			@media screen and ( max-width: 767.67px )
+				font-size: r(18px)
+		.title-big
+			color: #ffffff
+			font-size: r(48px)
+			font-weight: 100
+			line-height: 1.2
+			margin-bottom: 25px
+			@media screen and ( max-width: 767.67px )
+				font-size: r(35px)
+			@media screen and ( max-width: 575.89px )
+				padding: 0 15px
+				font-size: r(30px)
+			@media screen and ( max-width: 325px )
+				font-size: r(25px)
+	.form-search
+		position: absolute
+		bottom: 0
+		left: 50%
+		z-index: 20
+		width: 100%
+		transform: translateX(-50%)
+		.container
+			@media screen and ( max-width: 767.67px )
+				max-width: none
+		.wrap-form
+			height: 60px
+			background-color: rgba(color(cream), 0.5)
+			border-radius: 20px 20px 0 0
+			z-index: 9
+			padding: 0 190px
+			display: flex
+			align-items: center
+			@media screen and ( max-width: 1279.89px )
+				padding: 0 50px
+			@media screen and ( max-width: 767.67px )
+				flex-wrap: wrap
+				padding: 15px 25px
+				height: auto
+				display: none
+			.form-group
+				flex: 1
+				margin-right: 10px
+				position: relative
+				@media screen and ( max-width: 767.67px )
+					flex: 0 0 100%
+					max-width: 100%
+					margin-bottom: 5px
+				&::after
+					content: 'event'
+					font-family: "Material Icons"
+					position: absolute
+					top: 50%
+					right: 15px
+					transform: translateY(-50%)
+					color: color(main)
+					font-size: 16px
+					font-weight: 400
+				input
+					width: 100%
+					height: 40px
+					outline: 0
+					border: 0
+					box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.1)
+					background-color: #ffffff
+					color: color(main-text)
+					font-size: r(14px)
+					font-weight: 400
+					appearance: none
+					padding-left: 21px
+					letter-spacing: 1.05px
+					border-radius: 20px
+			.frm-btnwrap
+				flex: 0 0 230px
+				max-width: 230px
+				position: relative
+				overflow: hidden
+				z-index: 2
+				@media screen and ( max-width: 767.67px )
+					flex: 0 0 100%
+					max-width: 100%
+				input
+					height: 40px
+					width: 100%
+					box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.1)
+					background-color: color(main)
+					color: color(cream)
+					z-index: 3
+					font-size: r(14px)
+					font-weight: 700
+					letter-spacing: 1.4px
+					outline: none
+					border: 0
+					position: relative
+					border-radius: 20px 
+					cursor: pointer
+					transition: .2s ease-in-out all
+
+

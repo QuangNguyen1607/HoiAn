@@ -1,0 +1,785 @@
+// text color
+.text 
+	+color-modifiers($prefix: '-')
+
+// background color
+.background 
+	+background-modifiers($prefix: '-')
+
+// font weight
+.fw
+	+font-weight-modifiers($prefix: '-')
+
+// font size
++list-loop('.fz-', '', 'font-size')
+@each $breakpoint in map-keys($breakpoints)
+	+breakpoint-up($breakpoint)
+		+list-loop('.fz-', #{$breakpoint + '-'} , 'font-size')
+
+// flex css
+.d-flex
+	display: flex
+.flex-wrap
+	flex-wrap: wrap
+.flex-nowrap
+	flex-wrap: nowrap
+.justify-start
+	justify-content: start
+.justify-center
+	justify-content: center
+.justify-end
+	justify-content: flex-end
+.justify-between
+	justify-content: space-between
+.justify-around
+	justify-content: space-around
+.align-start
+	align-items: flex-start
+.align-center
+	align-items: center
+.align-end
+	align-items: flex-end
+.row-reverse
+	flex-direction: row-reverse
+.col-reverse
+	flex-direction: col-reverse
+
+// css typography
+.text-left
+	text-align: left
+.text-right
+	text-align: right
+.text-center
+	text-align: center
+.text-justify
+	text-align: justify
+.text-justify-left
+	text-align: justify
+	text-align-last: left
+.text-justify-right
+	text-align: justify
+	text-align-last: right
+.text-justify-center
+	text-align: justify
+	text-align-last: center
+.text-uppercase
+	text-transform: uppercase
+
+// other
+.mx-auto
+	margin: 0 auto
+.my-auto
+	margin: auto 0
+.m-auto 
+	margin: auto
+.w-10
+	width: percentage(10/100)
+.w-100
+	width: 100%
+.h-100
+	height: 100%
+.button-prev, .button-next
+	cursor: pointer
+.type-none
+	list-style-type: none 
+	margin: 0
+	padding: 0
+.box-shadow
+	box-shadow: 0 0 5px 1px rgba(black, 0.1)
+
+// css mixin
+.line
+	overflow: hidden
+	display: -webkit-box
+	text-overflow: ellipsis
+	-webkit-box-orient: vertical
+.line-1
+	+line(1)
+.line-2
+	+line(2)
+.line-3
+	+line(3)
+.line-4
+	+line(4)
+.line-5
+	+line(5)
+
+.img-scale
+	display: block
+	position: relative
+	overflow: hidden
+	img
+		position: absolute
+		width: 100%
+		height: 100%
+		top: 0
+		left: 0
+		object-fit: cover
+		transition: .2s ease-in-out all
+.iframe-scale
+	display: block
+	position: relative
+	overflow: hidden
+	iframe
+		position: absolute
+		width: 0
+		min-width: 100%
+		height: 100%
+		top: 0
+		left: 0
+		object-fit: contain
+.video-scale
+	display: block
+	position: relative
+	overflow: hidden
+	video
+		position: absolute
+		width: 100%
+		height: 100%
+		top: 0
+		left: 0
+		object-fit: cover
+
+.hover-underline
+	position: relative
+	transition: background-size .6s ease
+	background-repeat: no-repeat
+	background-size: 0 100%
+	&:hover
+		background-size: 100% 100%
+// end css mixin
+
+.transition-ex
+	transform-origin: 50%
+	transition-property: background
+	transition-duration: 0.3s
+	transition-timing-function: ease-out
+
+.line-bottom
+	border-bottom: 1px solid rgba(color(main), 0.28)
+.bg-primary
+	background-color: color(cream)
+.bg-2
+	background-color: #eee7da
+.popup-home
+	width: 1020px
+	height: auto
+	padding: 0!important
+.pagination
+	display: flex
+	align-items: center
+	justify-content: center
+	padding-left: 0
+	li
+		list-style: none
+		&.active
+			a, span
+				background-color: color(main)
+				border: 1px solid color(main)
+				color: white
+		+ li
+			margin-left: 15px
+		a,span
+			width: 40px
+			height: 40px
+			border: 1px solid color(main-text)
+			display: flex
+			align-items: center
+			justify-content: center
+			color: color(main-text)
+			font-size: r(15px)
+			font-weight: 400
+			text-transform: uppercase
+			transition: .3s all ease-in-out
+			&:hover
+				color: white
+				background-color: color(main)
+				border: 1px solid color(main)
+.video-gallery
+	.box-content
+		.desc
+			opacity: 0.7
+			color: #ffffff
+			font-size: 1rem
+			font-weight: 400
+			margin-top: 30px
+	.img-video
+		position: relative
+		.img
+			a
+				display: block
+				width: 100%
+				height: 350px
+				border-radius: 10px
+				overflow: hidden
+				position: relative
+				&::before
+					content: ''
+					position: absolute
+					top: 0
+					left: 0
+					width: 100%
+					height: 100%
+					background-color: rgba(0,0,0,0.25)
+				@media screen and ( max-width: 767.67px )
+					height: auto
+				img
+					width: 100%
+					height: 100%
+					object-fit: cover
+		.icon-video
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%,-50%)
+			pointer-events: none
+.comment-on-site
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03)
+	// border-radius: 20px
+	background-color: #ffffff
+	padding: 40px
+	@media screen and ( max-width: 575.89px )
+		padding: 20px
+	.wrap-cm-1
+		display: flex
+		@media screen and ( max-width: 1023.67px )
+			flex-wrap: wrap
+	.section-title
+		margin-bottom: 35px
+		@media screen and ( max-width: 575.89px )
+			margin-bottom: 0px
+	.wrap-star
+		flex: 0 0 17.62%
+		max-width: 17.62%
+		border-right: 2px solid #e1e1e1
+		padding-top: 10px
+		@media screen and ( max-width: 767.67px )
+			flex: 0 0 110px
+			max-width: 110px
+		@media screen and ( max-width: 575.89px )
+			flex: 0 0 100%
+			max-width: 100%
+			border-right: 0px
+			display: flex
+			flex-direction: column
+			justify-content: center
+			align-items: center
+			margin-bottom: 15px
+		.rating-text
+			color: #999
+			font-size: 1rem
+			font-weight: 400
+			margin-top: 20px
+			padding-left: 11px
+			@media screen and ( max-width: 575.89px )
+				padding-left: 0
+				margin-top: 10px
+		.rating-number
+			color: red
+			font-size: r(78px)
+			font-weight: 700
+			text-align: left
+			margin-left: 0
+			margin-bottom: 5px
+	.send-m
+		flex: 0 0 22.56%
+		max-width: 22.56%
+		border-left: 2px solid #e1e1e1
+		padding-left: 22px
+		padding-top: 14px
+		@media screen and ( max-width: 1023.67px )
+			flex: 0 0 100%
+			max-width: 100%
+			border-left: 0px
+			display: flex
+			flex-direction: column
+			align-items: center
+			padding-left: 0px
+		.button-cate
+			padding: 0px
+			width: 100%
+			@media screen and ( max-width: 1023.67px )
+				width: 170px
+		p
+			text-align: center
+			margin-bottom: 10px
+	.wrap-process-star
+		flex: 1
+		padding: 5px 0px
+		padding-left: 34px
+		@media screen and ( max-width: 1279.89px )
+			padding-left: 20px
+		@media screen and ( max-width: 575.89px )
+			padding-left: 0
+		@media screen and ( max-width: 1023.67px )
+			.wrap-process
+				flex: 1
+
+		.chart
+			.item
+				display: flex
+				align-items: center
+				+ .item
+					margin-top: 9px
+				.number
+					color: #333333
+					font-size: r(15px)
+					font-weight: 400
+					width: 8px
+					margin-right: 3px
+				em
+					color: #bbbbbb
+					font-size: 1rem
+					font-weight: 400
+					margin-right: 9px
+				.process-bar
+					width: 282px
+					margin-top: 0
+					height: 9px
+					@media screen and ( max-width: 1279.89px )
+						width: 190px
+					@media screen and ( max-width: 1023.67px )
+						width: 100%
+				.text-percent
+					margin-left: 10px
+					color: #111111
+					font-size: r(14px)
+					font-weight: 500
+	.wrap-cm-2
+		margin-top: 21px
+		.journalEditor
+			height: auto
+			// border-radius: 10px
+			border: 1px solid #dddddd
+			background-color: #ffffff
+			position: relative
+			display: block
+			.icon-close
+				position: absolute
+				top: 11px
+				right: 11px
+				cursor: pointer
+				em
+					color: #c1c1c1
+					font-size: r(18px)
+					font-weight: 400
+			.box-text
+				padding: 18px 20px 0px 20px
+				border-bottom: 1px solid #dddddd
+				textarea
+					height: 122px
+					outline: none
+					width: 100%
+					border: 0
+					color: #999999
+					font-size: r(14px)
+					font-weight: 400
+			.journalInfo
+				display: flex
+				align-items: center
+				padding: 0 20px
+				min-height: 49px
+				flex-wrap: wrap
+				@media screen and ( max-width: 1023.67px )
+					padding: 10px 10px
+				.rating-star-number
+					flex: 0 0 158px
+					max-width: 158px
+					display: flex
+					@media screen and ( max-width: 1023.67px )
+						flex: 0 0 100%
+						max-width: 100%
+						margin-bottom: 10px
+					label
+						margin-right: 6px
+						padding-top: 2px
+						color: #999999
+						font-size: r(14px)
+						font-weight: 400
+					.rating
+						img
+							cursor: pointer
+							margin-right: 0px
+							width: 12px
+							height: 12px
+				.text
+					color: #999999
+					font-size: r(14px)
+					font-weight: 400
+				.btnShare
+					flex: 0 0 91px
+					max-width: 91px
+					@media screen and ( max-width: 767.67px )
+						flex: 0 0 100%
+						max-width: 100%
+				input
+					flex: 1
+					margin-right: 20px
+					@media screen and ( max-width: 767.67px )
+						flex: 0 0 100%
+						max-width: 100%
+						margin-bottom: 10px
+				input
+					width: 100%
+					height: 34px
+					outline: 0
+					border: 0
+					padding-left: 19px
+					background-color: #f4f4f4
+					color: #999999
+					font-size: r(13px)
+					font-weight: 400
+				.btnShare
+					height: 34px
+					background-color: #dadcdf
+					display: flex
+					align-items: center
+					justify-content: center
+					color: #333333
+					font-size: 14px
+					font-weight: 400
+	.show-comment
+		padding-top: 24px
+		margin-top: 30px
+		border-top: 1px solid #eeeeee
+		.section-title
+			margin-bottom: 0px
+			color: #111111
+			font-size: 1rem
+			font-weight: 700
+			text-transform: uppercase
+		.wrap-button-comment
+			padding-top: 15px
+			display: flex
+			align-items: center
+			justify-content: center
+			.button-expand,.button-rut
+				display: flex
+				align-items: center
+				cursor: pointer
+				span
+					color: color(main)
+					font-size: r(14px)
+					font-weight: 600
+					text-transform: uppercase
+				em
+					color: color(main)
+					font-size: 20px
+					font-weight: 400
+					margin-left: 3px
+			.button-rut
+				display: none
+		.wrap-bl, .journalItems
+			overflow: hidden
+		.binh-luan, .cmt-item
+			border-bottom: 1px solid #e1e1e1
+			padding-top: 26px
+			padding-bottom: 26px
+			.comment-items
+				display: flex
+				@media screen and ( max-width: 575.89px )
+					flex-wrap: wrap
+			.avatar
+				flex: 0 0 68px
+				max-width: 68px
+				margin-right: 32px
+				@media screen and ( max-width: 575.89px )
+					max-width: 100%
+					flex: 0 0 100%
+					margin-right: 0px
+					margin-bottom: 10px
+			.user-content
+				.name
+					display: flex
+					align-items: center
+					.mod
+						display: inline-block
+						margin-left: 5px
+						border-radius: 5px
+						background-color: #eaeaea
+						padding: 4px 8px
+						margin-left: 10px
+						@media screen and ( max-width: 767.89px )
+							font-size: 0.8rem
+					*
+						color: color(main-text)
+						font-size: 1rem
+						font-weight: 600
+				.cmt-rating
+					margin-bottom: 5px
+					img
+						width: 12px
+						height: 12px
+				.content
+					color: #333333
+					font-size: r(16px)
+					font-weight: 400
+					line-height: 24px
+					@media screen and ( max-width: 575.89px )
+						font-size: 0.8rem
+				.wrap-traloi,.reply-wrapper
+					display: flex
+					margin-top: 20px
+					a
+						font-size: r(14px)
+						color: #007ff0
+					span
+						font-size: r(14px)
+						color: #999999
+						margin-left: 10px
+		.jcmt
+			margin-top: 20px
+			list-style: none
+			padding-left: 100px
+			li
+				padding-bottom: 15px
+			@media screen and ( max-width: 575.89px )
+				padding-left: 0px
+			textarea
+				width: 100%
+				height: 120px
+				border: 1px solid #ddd
+				padding: 20px
+				border-radius: 5px
+				font-size: 1rem
+				@media screen and ( max-width: 575.89px )
+					font-size: 0.8rem
+			.cmt-area
+				margin-bottom: 15px
+			.jsummary
+				border-top: 2px dotted #e0e0e0
+				padding-top: 15px
+				.cmreport
+					color: red
+					font-size: r(16px)
+					margin-left: 5px
+					cursor: pointer
+					@media screen and ( max-width: 575.89px )
+						font-size: 0.8rem
+
+				abbr
+					color: color(main)
+					text-decoration: none
+					@media screen and ( max-width: 575.89px )
+						font-size: 0.8rem
+					&::before
+						content: '-'
+						padding-left: 1px
+						padding-right: 5px
+						color: #333
+				.cmlike
+					span
+						color: #007ff0
+						&::before
+							content: '-'
+							padding-left: 4px
+							padding-right: 4px
+							color: #333
+				.des
+					padding: 5px 0px
+					color: #333333
+					font-size: r(16px)
+					font-weight: 400
+				strong
+					.mod
+						color: color(main)
+						&::before
+							content: '|'
+							padding-left: 3px
+							padding-right: 5px
+			.cmtinfo
+				display: flex
+				@media screen and ( max-width: 575.89px )
+					flex-wrap: wrap
+				input
+					flex: 1
+					margin-right: 5px
+					@media screen and ( max-width: 575.89px )
+						margin-right: 0
+						+ .form-group
+							margin-left: 3px
+				input
+					padding: 8px 12px
+					width: 100%
+					border: 1px solid #ddd
+					font-size: 1rem
+					@media screen and ( max-width: 575.89px )
+						font-size: 0.7rem
+				a
+					display: flex
+					flex: 150px
+					max-width: 150px
+					align-items: center
+					justify-content: center
+					background-color: color(main)
+					color: white
+					@media screen and ( max-width: 575.89px )
+						flex: 0 0 100%
+						max-width: 100%
+						height: 33px
+						margin-top: 3px
+.list-tool-menu
+	position: fixed
+	right: 20px
+	bottom: 20px
+	list-style: none
+	z-index: 999
+	transform: translateY(100%)
+	opacity: 0
+	visibility: hidden
+	transition: .3s all ease-in-out
+	padding-left: 0
+	@media screen and ( max-width: 1023.89px )
+		bottom: 60px
+	&.active
+		opacity: 1
+		visibility: visible
+		transform: translateY(0)
+	li
+		position: relative
+		cursor: pointer
+		&:hover
+			.box-hover
+				opacity: 1
+				visibility: visible
+		.box-hover
+			position: absolute
+			right: 20%
+			top: 50%
+			height: 100%
+			transform: translateY(-50%)
+			display: flex
+			align-items: center
+			opacity: 0
+			visibility: hidden
+			padding: 0 20px
+			padding-right: 60px
+			z-index: -1
+			border-radius: 40px
+			overflow: hidden
+			transition: .3s all ease-in-out
+			a
+				font-size: r(16px)
+				white-space: nowrap
+				color: white
+
+		+ li
+			margin-top: 10px
+		.icons
+			width: 60px
+			height: 60px
+			box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.1)
+			border-radius: 30px
+			display: flex
+			align-items: center
+			justify-content: center
+			@media screen and ( max-width: 1023.89px )
+				width: 40px
+				height: 40px
+	.location
+		.box-hover
+			background-color: color(light-blue)
+		.icons
+			background-color: color(light-blue)
+			color: #ffffff
+			font-size: r(30px)
+			@media screen and ( max-width: 1023.89px )
+				font-size: r(20px)
+	.hotline
+		.box-hover
+			background-color: #5a94a2
+		.icons
+			background-color: #5a94a2
+			color: #ffffff
+			font-size: r(30px)
+			@media screen and ( max-width: 1023.89px )
+				font-size: r(20px)
+	.mail
+		.box-hover
+			background-color: #accdd4
+		.icons
+			background-color: #accdd4
+			color: #ffffff
+			font-size: r(30px)
+			@media screen and ( max-width: 1023.89px )
+				font-size: r(20px)
+	.buttonToTop
+		a
+			border: 1px solid color(light-blue)
+			background-color: #ffffff
+			color: color(light-blue)
+			font-size: r(30px)
+			width: 60px
+			height: 60px
+			box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.1)
+			border-radius: 30px
+			display: flex
+			align-items: center
+			justify-content: center
+			@media screen and ( max-width: 1023.89px )
+				width: 40px
+				height: 40px
+				font-size: r(20px)
+.product-detail-page
+	background-color: color(cream)
+.form-group .fa.fa-exclamation-triangle
+	width: fit-content!important
+	height: auto!important
+	top: 10px!important
+	animation: AlertError .4s linear 1!important
+	color: red!important
+	&::before
+		position: static!important
+#ctl00_mainContent_ctl02_captcha
+	width: 61%!important
+.tien-ich-ct
+	.home-3
+		padding-top: 40px
+	.box-desc
+		min-height: 135px!important
+		.title-p
+			color: #d0b061
+			font-size: r(18px)
+			font-weight: 700
+.news-detail-page
+	.global-breadcrumb
+		background-color: color(cream)
+.button-next-2,.button-prev-2
+	outline: none
+	border: 0
+	display: flex
+.map-360
+	width: 70vw !important
+	height: 80vh !important
+	padding: 0 !important
+	overflow: hidden !important
+	iframe
+		width: 100% !important
+		height: 100% !important
+.homepage
+	.Module-265
+		display: none !important
+.wrap-button-captcha
+	display: flex
+	justify-content: space-between
+	flex-wrap: wrap
+.cmteditarea
+	display: none
+.cmtbtn
+	display: none
+.wrap-login.login-page
+	.offset-xl-4
+		margin: 0 auto
+	.login-form
+		box-shadow: 2px 10px 20px rgba(0, 0, 0, 0.15)
+		padding: 20px
+		border-radius: 20px
+		input[type="submit"]
+			background-color: color(main) !important
+			transition: .3s all ease-in-out
+			&:hover
+				background-color: color(main-text) !important
+		.btn-login::after
+			display: none
+.opacity
+	opacity: 0

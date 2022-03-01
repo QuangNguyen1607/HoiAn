@@ -1,0 +1,36 @@
+.uu-dai_page
+	.global-breadcrumb
+		background-color: color(cream)
+.page-uu-dai
+	background-color: color(cream)
+	[class*="col-"]
+		margin-bottom: r(30px)
+	.wrap-title-main
+		margin-bottom: r(30px)
+	.item
+		a
+			display: block
+		.img
+			+img-scale(260/390)
+		.wrap-content
+			padding: r(15px)
+			background: white
+			.content
+				color: color(main)
+				font-weight: 700
+				font-size: r(18px)
+				transition: .3s all ease-in-out
+				height: 54px
+				+rgtext(2)
+			time
+				font-size: 14px
+				opacity: 0.5
+				letter-spacing: 0.7px
+				color: #111111
+		&:hover
+			.wrap-content
+				.content
+					color: color(main-text)
+	.modulepager
+		.pagination
+			margin-top: r(20px)

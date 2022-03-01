@@ -1,0 +1,12 @@
+{
+	"buildAll": false,
+	"page": [{
+			"name": "index",
+			"isWorking": true
+		},
+		{
+			"name": "about",
+			"isWorking": false
+		}
+	]
+}

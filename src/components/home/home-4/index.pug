@@ -1,0 +1,20 @@
+section.section-post-list.main-section(setBackground="./img/bg-tintuc.png")
+	.container
+		.wrap-title-header
+			.wrap-title-main.white
+				.main-title Tin tức
+				.desc-title Thông tin du lịch hữu ích dành cho bạn
+			a.button-readmore.transparent(href="") tất cả
+		.wrap-post-list
+			.row
+				-for(i=0;i<3;i++)
+					.col-lg-4.col-sm-6
+						.box-tin
+							.img.zoom-img
+								a(href="")
+									img(data-src="./img/home/h4-1.png" alt="" class="lazyload")
+							.wrap-content
+								a(href="").title Mai Châu Hideaway – thiên đường xanh giữa lòng hồ Hòa Bình
+								.date 07.12.2020
+
+

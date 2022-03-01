@@ -1,0 +1,136 @@
+@use "sass:math"
+
+$layout: 100% !default
+$container: r(1230px) !default
+$colCount: 12 !default
+$offset: r(15px) !default
+
+// setting breakpoints
+$small: 576px !default
+$medium: 768px !default
+$large: 1024px !default
+$desktop-small: 1280px !default
+$desktop-medium: 1366px !default
+$desktop-large: 1440px !default
+
+$grid-breakpoints: (sm: $small, md: $medium, lg: $large, xl: $desktop-small) !default
+$container-breakpoints: ($small: 560px, $medium: 750px, $large: 990px, $desktop-small: 1200px, $desktop-medium: 1260px, $desktop-large: 1260px) !default
+
+html
+	font-family: 'Niramit', sans-serif
+	line-height: 1.5
+	-webkit-text-size-adjust: 100%
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+	-ms-overflow-style: scrollbar
+
+body
+	max-width: $layout
+	font-family: 'Niramit', sans-serif
+	font-weight: 400
+	line-height: 1.5
+	color: color(333)
+	background-color: white
+	&::-webkit-scrollbar
+		width: 8px
+	&::-webkit-scrollbar-track
+		background: #f1f1f1
+	&::-webkit-scrollbar-thumb
+		background: color(main)
+		border-radius: 3px
+		border-right: thin solid #f1f1f1
+		border-left: thin solid #f1f1f1
+	&::-webkit-scrollbar-thumb:hover
+		background: color(main)
+
+body, html 
+	font-size: 13px
+	scroll-behavior: smooth
+	@media(min-width: 576px)
+		font-size: 14px
+	@media(min-width: 768px)
+		font-size: 14.5px
+	@media(min-width: 1024px)
+		font-size: 15px
+	@media(min-width: 1280px)
+		font-size: 16px
+main
+	overflow: hidden
+	@media screen and ( max-width: 767.67px )
+		padding-top: 64px
+
+.container
+	width: 100%
+	max-width: ($container + ($offset * 2))
+	padding-right: $offset
+	padding-left: $offset
+	margin-left: auto 
+	margin-right: auto 
+
+@each $bpNumber, $maxWidth in $container-breakpoints
+	@media (min-width: #{$bpNumber})
+		.container
+			max-width: $maxWidth
+
+.container-fluid 
+	width: 100%
+	padding-right: $offset
+	padding-left: $offset
+	margin-right: auto
+	margin-left: auto
+
+.row
+	display: flex
+	flex-wrap: wrap 
+	margin-left: -$offset
+	margin-right: -$offset
+
+.no-gutters
+	margin-left: 0
+	margin-right: 0
+
+.no-gutters>*,
+.no-gutters>[class*="col-"]
+	padding-left: 0
+	padding-right: 0
+
+[class*="col-"]
+	position: relative
+	width: 100%
+	padding-right: $offset
+	padding-left: $offset
+
+.col
+	-ms-flex-preferred-size: 0
+	flex-basis: 0
+	-ms-flex-positive: 1
+	flex-grow: 1
+	max-width: 100%
+
+.col-auto
+	-ms-flex: 0 0 auto
+	flex: 0 0 auto
+	width: auto
+	max-width: 100%
+
+@for $col from 1 through $colCount
+	.col-#{$col}
+		flex: 0 0 (100% /$colCount * $col)
+		max-width: (100% /$colCount * $col)
+
+@each $bp, $value in $grid-breakpoints
+	@media (min-width: #{$value})
+		.col-#{$bp}
+			-ms-flex-preferred-size: 0
+			-ms-flex-positive: 1
+			flex-basis: 0
+			flex-grow: 1
+			max-width: 100%
+		.col-#{$bp}-auto
+			-ms-flex: 0 0 auto
+			flex: 0 0 auto
+			width: auto
+			max-width: 100%
+		@for $col from 1 through $colCount
+			.col-#{$bp}-#{$col}
+				flex: 0 0 (100% /$colCount * $col)
+				max-width: (100% /$colCount * $col)

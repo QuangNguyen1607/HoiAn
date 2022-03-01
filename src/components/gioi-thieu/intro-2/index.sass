@@ -1,0 +1,80 @@
+.intro-2
+	.wrap-title-main
+		color: color(light-blue)
+		ul 
+			padding-left: 20px
+	.swiper-why-me
+		position: relative
+		.wrap-button
+			@media screen and ( max-width: 1400px )
+				margin-top: r(30px)
+				margin-bottom: 0
+	.item
+		position: relative
+		display: block
+		&:hover
+			.stt
+				opacity: 1
+				top: -10px
+				&::before
+					opacity: 1
+		a.img
+			display: block
+			height: 295px
+			@media screen and ( max-width: 767.9px )
+				height: 250px
+			img
+				height: 100%
+			&::before
+				content: ""
+				position: absolute
+				top: 0
+				left: 0
+				width: 100%
+				height: 100%
+				background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 50%)
+				z-index: 2
+		.text-inner
+			position: absolute
+			width: 100%
+			bottom: 0
+			left: 0
+			padding: r(30px)
+			padding-right: r(60px)
+			font-size: r(24px)
+			text-shadow: 1px 2px 5px rgba(0, 0, 0, 0.25)
+			color: white
+			z-index: 3
+			line-height: r(32px)
+			pointer-events: none
+			@media screen and ( max-width: 1279.9px )
+				padding-right: r(30px)
+		.stt
+			position: absolute
+			padding-right: 24px
+			top: 0
+			left: 0
+			opacity: 0.5
+			color: #ffffff
+			font-size: r(18px)
+			font-weight: 600
+			writing-mode: vertical-lr
+			transform: rotate(180deg)
+			display: flex
+			flex-direction: row-reverse
+			align-items: center
+			transition: .3s all ease-in-out
+			&::before
+				content: ''
+				width: 1px
+				height: 30px
+				background-color: #ffffff
+				opacity: 0.5
+				margin-top: 10px
+		
+.intro_page
+	.file-nav-1
+		background-color: color(cream)
+	.global-breadcrumb
+		background-color: color(cream)!important
+

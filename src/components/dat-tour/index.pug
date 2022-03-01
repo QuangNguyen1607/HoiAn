@@ -1,0 +1,49 @@
+.page-dat-tour(setBackground="./img/bg-dat-tour.png")
+	.container
+		.wrap-box.no-gutters
+			.box-left
+				.wrap-title-main
+					.main-title Đặt tour
+					.desc-title Quý khách vui lòng điền thông tin dưới đây chúng tôi sẽ phản hồi trong thời gian sớm nhất.
+				.wrap-form
+					.form-flex.flex-6-4
+						.form-group
+							label(for="") Tên Tour*
+							input(type="text")
+						.form-group
+							label(for="") Số lượng khách*
+							select(name="")
+								option(value="") 1
+								option(value="") 2
+								option(value="") 3
+					.form-group.total-money
+						label(for="") Tổng số tiền
+						input(type="text" value="2.198.000 VNĐ")
+					.title-form Thông tin người đặt tour
+					.form-flex.flex-6-4
+						.form-group
+							label(for="") Họ và tên*
+							input(type="text")
+						.form-group
+							label(for="") Giới tính*
+							select(name="")
+								option(value="") Nam
+					.form-flex.flex-3-3-3
+						.form-group
+							label(for="") Email*
+							input(type="text")
+						.form-group
+							label(for="") Số điện thoại*
+							input(type="text")
+						.form-group
+							label(for="") Quốc gia*
+							select(name="")
+					.form-group
+						label(for="") Ghi chú
+						textarea(name="" cols="30" rows="10")
+					.frm-btnwrap
+						input(type="text" placeholder="Nhập mã captcha")
+						.frm-btn
+							input(type="submit" value="Đặt ngay")
+			.img
+				img(src="./img/119_Bungalow_(3)ed.png" alt="")

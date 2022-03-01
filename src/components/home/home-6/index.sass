@@ -1,0 +1,52 @@
+.home-6
+	.box-content
+		background-color: #ffffff
+		opacity: 0.95
+		padding: 15px 30px 30px 15px
+		width: calc(100% - 60px)
+		margin-top: -60px
+		position: relative
+		margin-bottom: 30px
+		.title
+			color: color(main-text)
+			font-size: r(24px)
+			font-weight: 400
+			margin-bottom: 20px
+			transition: .3s all ease-in-out
+			&:hover
+				color: color(main)
+			@media screen and ( max-width: 575.89px )
+				margin-bottom: 10px
+		.desc
+			color: #333333
+			font-size: r(14px)!important
+			font-weight: 600!important
+			margin-bottom: 0!important
+			line-height: 24px
+			+rgtext(2)
+	.box-post-tin
+		margin-bottom: -30px
+		.img-scale 
+			+img-scale(400/600)
+	.wrap-button
+		width: 51px
+		height: 51px
+		position: absolute
+		right: -24px
+		top: 34px
+		background-color: color(cream)
+		border-radius: 50%
+		display: flex
+		align-items: center
+		justify-content: center
+		margin-top: 0!important
+		padding-top: 0!important
+		em
+			color: #725639
+			font-size: 15px
+			cursor: pointer
+			outline: 0
+			border: none
+	@media(min-width: 1440px)
+		padding-top: r(76px)
+		padding-bottom: r(70px)

@@ -1,0 +1,22 @@
+section.main-section.page-gallery-video
+    .container
+        .wrap-title-main
+            .main-title Video
+            .desc-title Mai Châu Hideaway Lake Resort là khu nghỉ dưỡng sinh thái duy nhất nằm ở lòng hồ Hòa Bình.
+        .wrap-box
+            -for(i=0;i<6;i++)
+                .item
+                    a(data-fancybox="images" href="./img/gallery/1.png").img.zoom-img
+                        img.lazyload(data-src="./img/gallery/1.png" alt="")
+                    .icon.inner
+                        em.material-icons videocam
+                    .text.inner mai châu hideaway 1
+        .modulepager
+            ul.pagination
+                li.active
+                    a(href="#") 1
+                li
+                    a(href="#") 2
+                li
+                    a(href="#") 3
+

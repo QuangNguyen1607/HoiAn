@@ -1,0 +1,34 @@
+.tien-ich-page-main
+	background-color: transparent
+	padding-bottom: 0
+	.wrap-box-item-hd
+		margin-bottom: 80px
+		.box-content
+			padding: 51px 70px 50px 77px
+			@media screen and ( max-width: 1023.89px )
+				padding: r(20px)
+			.icon
+				margin-bottom: 19px
+		@media screen and ( max-width: 1023.89px )
+			border-radius: 20px
+			overflow: hidden
+		&:nth-child(2n)
+			@media screen and ( min-width: 1024px )
+				.img
+					order: 1
+					border-radius: 20px 0px 0px 20px
+				.box-content
+					order: 2
+					border-radius: 0px 20px 20px 0px
+		&:nth-child(2n-1)
+			@media screen and ( min-width: 1024px )
+				.img
+					order: 2
+					border-radius: 0px 20px 20px 0px
+				.box-content
+					order: 1
+					border-radius: 20px 0px 0px 20px
+.page-tien-ich
+	background-image: url("../img/bg-full-1.png")
+	background-size: cover
+	background-position: center center

@@ -1,0 +1,39 @@
+.intro-4
+	.wrap-box
+		display: flex
+		@media screen and ( max-width: 1279.9px )
+			flex-wrap: wrap
+			justify-content: space-between
+		.wrap-item
+			flex: 0 0 292px
+			margin-right: r(20px)
+			padding: r(20px) r(30px) r(30px)
+			height: 230px
+			@media screen and ( max-width: 1279.9px )
+				flex: 0 0 calc(50%-10px)
+				margin-right: 0
+				margin-bottom: r(20px)
+			@media screen and ( max-width: 767.9px )
+				flex: 0 0 100%
+				margin-right: 0
+				margin-bottom: r(20px)
+				min-height: 230px
+			.title
+				font-size: r(24px)
+				font-weight: 700
+				margin-bottom: r(10px)
+			.content
+				font-size: r(14px)
+			&:last-child
+				margin-right: 0
+			&:nth-child(odd)
+				background-color: color(main)
+				.title,
+				.content
+					color: #ffffff
+			&:nth-child(even)
+				background-color: color(cream)
+				.title
+					color: color(main-text)
+				.content
+					color: #333333

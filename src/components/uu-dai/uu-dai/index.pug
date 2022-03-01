@@ -1,0 +1,22 @@
+section.main-section.page-uu-dai
+    .container
+        .wrap-title-main
+            .main-title Ưu đãi
+            .desc-title Thông tin du lịch hữu ích dành cho bạn.
+        .row
+            -for(i=0;i<6;i++)
+                .col-lg-4.col-md-6.col-sm-12
+                    .item
+                        a(href="").img.zoom-img
+                            img.lazyload(data-src="./img/uu-dai/1.png", alt="")
+                        a(href="").wrap-content
+                            .content Ưu dãi vàng đón thu sang
+                            time Từ 01.08.2020 - 01.09.2020
+        .modulepager
+            ul.pagination
+                li.active
+                    a(href="#") 1
+                li
+                    a(href="#") 2
+                li
+                    a(href="#") 3

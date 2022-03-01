@@ -1,0 +1,29 @@
+section.main-section.page-news-list
+    .container
+        .wrap-title-main
+            .main-title Trải nghiệm & Tips
+            .desc-title Thông tin du lịch hữu ích dành cho bạn
+        .row
+            -for(i=0;i<2;i++)
+                .col-md-6.col-sm-12
+                    a(href="").item
+                        .img.zoom-img
+                            img.lazyload(data-src="./img/tin-tuc/1.png" alt="")
+                        .wrap-content
+                            .title Địa chỉ cuối tuần: Khu nghỉ ở Mai Châu cho ngày đầu đông gần Hà Nội
+                            time 07.12.2020
+            -for(i=0;i<3;i++)
+                .col-md-4.col-sm-12
+                    .item
+                        a(href="").img.zoom-img
+                            img.lazyload(data-src="./img/tin-tuc/1.png" alt="")
+                        a(href="").wrap-content
+                            .title Địa chỉ cuối tuần: Khu nghỉ ở Mai Châu cho ngày đầu đông gần Hà Nội
+                            time 07.12.2020
+        ul.pagination
+            li.active
+                a(href="#") 1
+            li
+                a(href="#") 2
+            li
+                a(href="#") 3

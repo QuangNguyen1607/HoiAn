@@ -1,0 +1,25 @@
+{
+	"font": [
+		"./src/assets/fonts/**",
+		"./bower_components/mdi/fonts/**"
+	],
+	"globalCss": [
+		"./src/_plugins/font.css",
+		"./node_modules/swiper/swiper-bundle.min.css",
+		"./bower_components/fancybox/dist/jquery.fancybox.min.css",
+		"./src/_plugins/date-picker/jquery-ui.css",
+		"./src/_plugins/3dimg/pannellum.css"
+	],
+	"globalJs": [
+		"./bower_components/jquery/dist/jquery.min.js",
+		"./src/_plugins/mapping.js",
+		"./node_modules/swiper/swiper-bundle.min.js",
+		"./bower_components/fancybox/dist/jquery.fancybox.min.js",
+		"./bower_components/lozad/dist/lozad.min.js",
+		"./src/_plugins/Tabslet/jquery.tabslet.min.js",
+		"./src/_plugins/date-picker/jquery-ui.js",
+		"./src/_plugins/sticky/jquery.sticky.js",
+		"./src/_plugins/active-scroll.js",
+		"./src/_plugins/3dimg/pannellum.js"
+	]
+}
