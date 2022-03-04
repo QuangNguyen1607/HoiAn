@@ -356,6 +356,7 @@ function swiperInit() {
 			nextEl: ".page-uu-dai-product .button-next-in",
 			prevEl: ".page-uu-dai-product .button-prev-in",
 		},
+		console.log(r)
 		pagination: {
 			el: ".page-uu-dai-product .swiper-pagination",
 			clickable: true,
